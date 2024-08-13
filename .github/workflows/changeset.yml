@@ -14,7 +14,7 @@ jobs:
       issues: write
       pull-requests: write
 
-    if: github.repository == 'BunnyWay/actions'
+    if: github.repository == 'BunnyWay/edge-script-sdk'
 
     name: Release
     runs-on: ubuntu-latest
