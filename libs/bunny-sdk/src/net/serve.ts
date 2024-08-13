@@ -1,9 +1,9 @@
-import { internal_getPlatform } from "../platform";
-import * as NodeImpl from "./_impl/node/serve";
-import { TcpListener } from "./tcp";
-import * as Tcp from "./tcp";
-import * as Ip from "./ip";
-import * as SocketAddr from './socket_addr';
+import { internal_getPlatform } from "../platform.ts";
+import * as NodeImpl from "./_impl/node/serve.ts";
+import { TcpListener } from "./tcp.ts";
+import * as Tcp from "./tcp.ts";
+import * as Ip from "./ip.ts";
+import * as SocketAddr from './socket_addr.ts';
 
 /**
  * A handler for HTTP Requests.

@@ -1,12 +1,26 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
+    "target": "esnext",
+    "module": "nodenext",
+    "lib": [
+      "esnext"
+    ],
     "outDir": "./dist",
+    "baseUrl": "./src",
     "rootDir": "./src",
     "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "downlevelIteration": true,
+    "forceConsistentCasingInFileNames": true,
+    "suppressExcessPropertyErrors": false,
+    "declaration": true,
+    "sourceMap": false,
     "noImplicitAny": false,
-    "esModuleInterop": true
+    "noEmitOnError": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
   "exclude": [
     "node_modules",

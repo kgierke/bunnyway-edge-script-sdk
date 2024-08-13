@@ -1,4 +1,4 @@
-import * as SocketAddr from "./socket_addr";
+import * as SocketAddr from "./socket_addr.ts";
 
 export type TcpListener = {
   /**

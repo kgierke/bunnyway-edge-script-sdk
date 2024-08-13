@@ -1,4 +1,4 @@
-import * as BunnySDK from "@bunny.net/edgescript-sdk";
+import * as BunnySDK from "../../../libs/bunny-sdk/esm-bunny/lib.mjs";
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -10,5 +10,4 @@ BunnySDK.net.http.serve({ port: 8080, hostname: '127.0.0.1' }, async (req) => {
   return new Response("blbl");
 });
 console.log("net");
-await sleep(10000);
-
+await sleep(100);

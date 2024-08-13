@@ -1,9 +1,9 @@
-import * as Tcp from "../../tcp";
-import * as Ip from "../../ip";
-import { ServeHandler, ServerHandler } from "../../serve";
+import * as Tcp from "../../tcp.ts";
+import * as Ip from "../../ip.ts";
+import { ServeHandler, ServerHandler } from "../../serve.ts";
 import * as HonoNode from "@hono/node-server";
 import { Hono } from "hono";
-import * as SocketAddr from "../../socket_addr";
+import * as SocketAddr from "../../socket_addr.ts";
 
 export function node_serve(listener: Tcp.TcpListener, handler: ServerHandler): ServeHandler {
   const addr = Tcp.unstable_local_addr(listener);
