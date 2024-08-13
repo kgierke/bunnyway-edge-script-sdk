@@ -1,33 +1,28 @@
-import * as esbuild from 'esbuild'
 import path from 'node:path'
-import npmDTS from 'npm-dts';
 import { readFile } from 'fs/promises';
+import { defineConfig } from 'tsup'
+import { build } from 'tsup'
 
 const pkg = JSON.parse(await readFile(new URL('./package.json', import.meta.url)));
 
 const sharedConfig = {
-  entryPoints: ['src/lib.ts'],
-  bundle: true,
-  minify: true,
-  outfile: 'dist/index.js',
+  entry: ['src/lib.ts'],
+  clean: true,
+  experimentalDts: true,
   define: {
     "VERSION": `"${pkg.version}"`,
   }
 };
 
-await new npmDTS.Generator({
-  entry: 'src/lib.ts',
-  output: 'dist/index.d.ts',
-}).generate();
-
 // CJS Build
-await esbuild.build({
+await build({
+  minify: false,
+  splitting: false,
+  sourcemap: false,
+  outDir: "dist/",
+  platform: "node",
   ...sharedConfig,
-  platform: 'node',
-  outfile: "dist/index.js",
-});
-
-
+})
 
 let noNodeImpl = {
   name: 'example',
@@ -42,22 +37,26 @@ let noNodeImpl = {
     }))
   },
 }
-
 // ESM Build
-await esbuild.build({
-  ...sharedConfig,
+await build({
+  minify: false,
+  splitting: true,
+  sourcemap: false,
+  outDir: "esm/",
   platform: 'neutral',
-  outfile: "esm/index.js",
-  plugins: [noNodeImpl],
-  // external: ["*/_impl/node.ts", "*/_impl/node/"],
-  format: "esm"
-});
-
-// Bunny Build
-await esbuild.build({
-  ...sharedConfig,
-  platform: 'neutral',
-  outfile: "esm-bunny/index.js",
+  esbuildPlugins: [noNodeImpl],
   format: "esm",
-  plugins: [noNodeImpl],
-});
+  ...sharedConfig,
+})
+
+// ESM Bunny Build
+await build({
+  minify: true,
+  splitting: false,
+  sourcemap: false,
+  outDir: "esm-bunny/",
+  platform: 'neutral',
+  esbuildPlugins: [noNodeImpl],
+  format: "esm",
+  ...sharedConfig,
+})

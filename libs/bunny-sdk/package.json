@@ -1,20 +1,19 @@
 {
   "name": "@bunny.net/edgescript-sdk",
   "version": "0.2.0",
-  "main": "dist/index.js",
-  "module": "esm/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/lib.js",
+  "module": "esm/lib.mjs",
+  "types": "dist/_tsup-dts-rollup.d.ts",
   "files": [
     "dist",
     "esm",
-    "esm-bunny",
-    "dist/index.d.ts"
+    "esm-bunny"
   ],
   "private": true,
   "scripts": {
     "lint": "eslint src",
     "test": "jest --silent --coverage",
-    "build": "rm -rf dist esm && node build.mjs"
+    "build": "rm -rf dist esm esm-bunny && node build.mjs"
   },
   "repository": {
     "type": "git",
@@ -29,8 +28,9 @@
   "devDependencies": {
     "@deno/shim-deno": "^0.19.2",
     "@eslint/js": "^9.8.0",
+    "@microsoft/api-extractor": "^7.47.6",
     "@types/jest": "^29.5.12",
-    "@types/node": "^22.1.0",
+    "@types/node": "^20.14.15",
     "@typescript-eslint/eslint-plugin": "^8.0.1",
     "@typescript-eslint/parser": "^8.0.1",
     "@vercel/ncc": "^0.38.1",
@@ -41,6 +41,7 @@
     "npm-dts": "^1.3.13",
     "prettier": "^3.3.3",
     "ts-jest": "^29.2.4",
+    "tsup": "^8.2.4",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.0.1"
   },

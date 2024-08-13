@@ -1,4 +1,4 @@
-import { IPv4 } from "./ip";
+import { IPv4 } from "./ip.ts";
 
 export type SocketAddr = {
   readonly _tag: "SocketAddrV4",

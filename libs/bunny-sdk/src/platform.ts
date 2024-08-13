@@ -14,7 +14,6 @@ type PlatformName =
 // Defined by `build` step.
 declare const VERSION: string;
 
-
 type Platform = {
   /**
    * @internal
