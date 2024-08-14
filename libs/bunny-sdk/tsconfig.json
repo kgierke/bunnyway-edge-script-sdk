@@ -6,9 +6,11 @@
       "esnext"
     ],
     "outDir": "./dist",
-    "rootDir": "./",
-    "baseUrl": "src",
+    "rootDir": "./src",
     "strict": true,
+    "noImplicitAny": false,
+    "esModuleInterop": false,
+    "skipLibCheck": true,
     "allowImportingTsExtensions": true,
     "allowSyntheticDefaultImports": true,
     "noUnusedLocals": true,
@@ -18,10 +20,7 @@
     "suppressExcessPropertyErrors": false,
     "declaration": true,
     "sourceMap": false,
-    "noImplicitAny": false,
-    "noEmitOnError": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true
+    "noEmitOnError": false
   },
   "exclude": [
     "dist",
