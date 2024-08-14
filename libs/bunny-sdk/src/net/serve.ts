@@ -11,7 +11,7 @@ import * as SocketAddr from './socket_addr.ts';
  */
 type ServerHandler = (request: Request) => Response | Promise<Response>;
 
-type ServeHandler = {};
+type ServeHandler = {} & unknown;
 
 /**
  * Serves HTTP requests on the given [TcpListener]

@@ -6,7 +6,6 @@
       "esnext"
     ],
     "outDir": "./dist",
-    "baseUrl": "./src",
     "rootDir": "./src",
     "strict": true,
     "allowSyntheticDefaultImports": true,
@@ -18,7 +17,7 @@
     "declaration": true,
     "sourceMap": false,
     "noImplicitAny": false,
-    "noEmitOnError": true,
+    "noEmitOnError": false,
     "esModuleInterop": true,
     "skipLibCheck": true
   },

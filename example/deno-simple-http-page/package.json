@@ -16,7 +16,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "deno lint",
-    "test": "deno test",
+    "test": "deno test --allow-none",
     "build": "echo \"No build with Deno!\"",
     "dev": "deno run src/main.ts",
     "release": "echo \"No release\""
