@@ -15,7 +15,7 @@ importers:
   example/deno-simple-http-page:
     dependencies:
       '@bunny.net/edgescript-sdk':
-        specifier: ^0.6.0
+        specifier: ^0.7.0
         version: link:../../libs/bunny-sdk
 
   example/simple-http-page:
