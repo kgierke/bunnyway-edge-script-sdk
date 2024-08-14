@@ -1,1 +1,1 @@
-pnpm run -r build && pnpm run -r publish
+pnpm run -r build && pnpm publish -r
