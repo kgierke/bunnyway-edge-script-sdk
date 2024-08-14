@@ -1,1 +1,1 @@
-pnpm run -r build && pnpm publish -r
+pnpm run -r build && pnpm changeset publish
