@@ -1,5 +1,11 @@
 # @bunny.net/edgescript-sdk
 
+## 0.5.8
+
+### Patch Changes
+
+- 677b80c: last bump
+
 ## 0.5.7
 
 ### Patch Changes
