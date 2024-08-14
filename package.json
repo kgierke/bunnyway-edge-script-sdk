@@ -5,7 +5,7 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "build": "pnpm run -r build",
-    "release": "pnpm changeset publish"
+    "release": "pnpm changeset publish && pnpm publish -r"
   },
   "dependencies": {},
   "devDependencies": {
