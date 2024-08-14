@@ -1,5 +1,11 @@
 # @bunny.net/edgescript-sdk
 
+## 0.5.0
+
+### Minor Changes
+
+- a9ff289: Test bump
+
 ## 0.4.0
 
 ### Minor Changes
