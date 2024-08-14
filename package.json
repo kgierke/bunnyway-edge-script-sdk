@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "build": "pnpm run -r build",
+    "release": "pnpm changeset publish"
   },
   "dependencies": {},
   "devDependencies": {

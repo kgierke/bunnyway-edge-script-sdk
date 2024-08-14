@@ -42,6 +42,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.BUNNY_GITHUB }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         with:
-          publish: "pnpm run -r release"
+          publish: "pnpm run build && pnpm run release"
           title: "🎉 Release"
           createGithubReleases: true
