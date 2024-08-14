@@ -1,5 +1,11 @@
 # @bunny.net/edgescript-sdk
 
+## 0.5.6
+
+### Patch Changes
+
+- 1d5d4fa: bump
+
 ## 0.5.5
 
 ### Patch Changes
