@@ -18,7 +18,10 @@ Network for your deployed script.
 
 > Even if the Bunny Runtime is very similar to the Deno & Node Runtime, some API
 > might differ or not being available due to the fact we leverage our network
-> and run scripts in a Serverless environment.
+> and run scripts in a serverless environment.
+>
+> We also have a roadmap and some items are just not priorized yet, if you want
+> to have those available, reach out to us any times!
 
 
 ## Usage
