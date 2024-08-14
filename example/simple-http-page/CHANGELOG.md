@@ -1,5 +1,12 @@
 # example/simple-http-page
 
+## 0.2.13
+
+### Patch Changes
+
+- Updated dependencies [8ae9f95]
+  - @bunny.net/edgescript-sdk@0.5.11
+
 ## 0.2.12
 
 ### Patch Changes
