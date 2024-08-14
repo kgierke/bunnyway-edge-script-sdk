@@ -9,7 +9,7 @@
     "esm",
     "esm-bunny"
   ],
-  "private": true,
+  "private": false,
   "scripts": {
     "lint": "eslint src",
     "test": "jest --silent --coverage",
