@@ -7,7 +7,7 @@
     "build": "pnpm run -r build",
     "release": "pnpm changeset publish && pnpm publish -r",
     "ci:version": "pnpm changeset version",
-    "ci:publish": "pnpm publish -r"
+    "ci:publish": "./scripts/publish.sh"
   },
   "dependencies": {},
   "devDependencies": {
