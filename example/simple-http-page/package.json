@@ -10,7 +10,8 @@
   "scripts": {
     "lint": "eslint src",
     "test": "jest --silent --coverage",
-    "build": "ncc build src/main.ts -o dist/"
+    "build": "ncc build src/main.ts -o dist/",
+    "release": "echo \"No release\""
   },
   "repository": {
     "type": "git",

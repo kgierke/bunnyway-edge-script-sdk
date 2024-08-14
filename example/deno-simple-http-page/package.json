@@ -6,7 +6,8 @@
     "lint": "deno lint",
     "test": "deno test",
     "build": "echo \"No build with Deno!\"",
-    "dev": "deno run src/main.ts"
+    "dev": "deno run src/main.ts",
+    "release": "echo \"No release\""
   },
   "dependencies": {
     "@bunny.net/edgescript-sdk": "workspace:*"
