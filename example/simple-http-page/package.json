@@ -10,8 +10,8 @@
   "scripts": {
     "lint": "eslint src",
     "test": "jest --silent --coverage",
-    "build": "echo \"No buil\"",
-    "build-full": "ncc build src/main.ts -o dist/",
+    "dev": "pnpm run build && node dist/index.js",
+    "build": "ncc build src/main.ts -o dist/",
     "release": "echo \"No release\""
   },
   "repository": {

@@ -1,7 +1,19 @@
 {
-  "name": "example/simple-http-page",
+  "name": "example/deno-simple-http-page",
+  "version": "0.2.14",
   "main": "src/index.ts",
   "type": "module",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BunnyWay/edge-script-sdk.git"
+  },
+  "keywords": [
+    "github",
+    "bunny"
+  ],
+  "author": "Bunny Devs",
+  "license": "MIT",
   "scripts": {
     "lint": "deno lint",
     "test": "deno test",
@@ -10,7 +22,7 @@
     "release": "echo \"No release\""
   },
   "dependencies": {
-    "@bunny.net/edgescript-sdk": "^0.5.10"
+    "@bunny.net/edgescript-sdk": "^0.5.12"
   },
   "devDependencies": {}
 }
