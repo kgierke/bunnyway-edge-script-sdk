@@ -1,5 +1,11 @@
 # @bunny.net/edgescript-sdk
 
+## 0.7.1
+
+### Patch Changes
+
+- 2bcc604: Bump
+
 ## 0.7.0
 
 ### Minor Changes
