@@ -31,6 +31,7 @@ jobs:
         uses: changesets/action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.BUNNY_GITHUB }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         with:
           publish: "pnpm changeset publish"
           title: "🎉 Release"
