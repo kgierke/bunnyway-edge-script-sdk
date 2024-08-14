@@ -19,6 +19,9 @@
     "type": "git",
     "url": "git+https://github.com/BunnyWay/edge-script-sdk.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "github",
     "bunny"
