@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://hono.dev">
+  <a href="https://bunny.net">
     <img src="https://raw.githubusercontent.com/BunnyWay/edge-script-sdk/main/docs/images/bunny.png" width="500" height="auto" alt="Bunny"/>
   </a>
 </div>
