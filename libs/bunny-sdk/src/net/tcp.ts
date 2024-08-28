@@ -24,7 +24,7 @@ export function unstable_local_addr(tcp: TcpListener): SocketAddr.SocketAddr {
   * Format the associated [TcpListener] to a String
   */
 export function toString(tcp: TcpListener): string {
-  return `${SocketAddr.ip(tcp.addr)}:${SocketAddr.port(tcp.addr)}`;
+  return `${SocketAddr.ip(tcp.addr).join('.')}:${SocketAddr.port(tcp.addr)}`;
 }
 
 /**
