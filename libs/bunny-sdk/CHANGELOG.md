@@ -1,5 +1,11 @@
 # @bunny.net/edgescript-sdk
 
+## 0.8.0
+
+### Minor Changes
+
+- 88318ed: Add a toString method to TCP Listener
+
 ## 0.7.1
 
 ### Patch Changes
