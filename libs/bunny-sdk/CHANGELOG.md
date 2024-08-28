@@ -1,5 +1,11 @@
 # @bunny.net/edgescript-sdk
 
+## 0.9.2
+
+### Patch Changes
+
+- 96c00b7: Try to remove the process dep
+
 ## 0.9.1
 
 ### Patch Changes
