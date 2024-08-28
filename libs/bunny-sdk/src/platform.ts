@@ -69,10 +69,11 @@ const internal_getPlatform = (): Platform => {
         : Deno.version?.deno ?? "unknown",
     };
   }
+  const process = globalThis.process;
   // Check if Node.js
   if (
     Object.prototype.toString.call(
-      typeof globalThis.process !== "undefined" ? process : 0,
+      typeof process !== "undefined" ? process : 0,
     ) === "[object process]"
   ) {
     return {
