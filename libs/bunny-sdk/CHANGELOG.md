@@ -1,5 +1,11 @@
 # @bunny.net/edgescript-sdk
 
+## 0.9.1
+
+### Patch Changes
+
+- 7d99bc7: Fix build
+
 ## 0.9.0
 
 ### Minor Changes
