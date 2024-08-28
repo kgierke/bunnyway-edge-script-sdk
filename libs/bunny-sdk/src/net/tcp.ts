@@ -27,7 +27,7 @@ export function unstable_local_addr(tcp: TcpListener): SocketAddr.SocketAddr {
 export function toString(tcp: TcpListener): string {
   switch (tcp.addr._tag) {
     case "SocketAddrV4":
-      return `${SocketAddr.ip(tcp.addr).join('.')}:${SocketAddr.port(tcp.addr)}`;
+      return `${SocketAddr.v4.ip(tcp.addr).join('.')}:${SocketAddr.v4.port(tcp.addr)}`;
     case "NoAddr":
       return "No addr associated to this listener. You should be running in a controlled environment.";
   }
