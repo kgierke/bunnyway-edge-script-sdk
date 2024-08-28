@@ -1,5 +1,12 @@
 # @bunny.net/edgescript-sdk
 
+## 0.9.0
+
+### Minor Changes
+
+- ec2d606: Consider the fact we can have a TcpListener with no associated Addr
+- 85e8df4: Add a proper addr handling"
+
 ## 0.8.1
 
 ### Patch Changes
