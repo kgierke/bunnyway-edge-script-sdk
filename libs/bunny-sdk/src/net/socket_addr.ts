@@ -1,27 +1,29 @@
-import { IPv4 } from "./ip.ts";
+import * as v4 from './socket/v4.ts';
+import * as noAddr from './socket/no_addr.ts';
 
-export type SocketAddr = SocketAddrV4 | NoAddr;
+export * as v4 from './socket/v4.ts';
 
-export type SocketAddrV4 = {
-  readonly _tag: "SocketAddrV4",
-  port: number,
-  ip: IPv4,
-};
-
-export type NoAddr = {
-  readonly _tag: "NoAddr",
-};
+export type SocketAddr = v4.SocketAddrV4 | noAddr.NoAddr;
 
 /**
-  * Returns the port number associated with this socket address.
-  */
-export function port(addr: SocketAddrV4): number {
-  return addr.port;
+ * Tell if it's a v4 [SocketAddr].
+ */
+export function isV4(value: SocketAddr): value is v4.SocketAddrV4 {
+  return value._tag === "SocketAddrV4";
 }
 
-/**
-  * Returns the IP address associated with this socket address.
-  */
-export function ip(addr: SocketAddrV4): IPv4 {
-  return addr.ip;
+export type SocketAddrError = InvalidAddr;
+
+const addr_symbol = Symbol("invalidAddr");
+export class InvalidAddr extends Error {
+  _guard: typeof addr_symbol = addr_symbol;
+
+  constructor(message: string) {
+    super(message);
+    this.name = "InvalidAddr";
+  }
+
+  override toString() {
+    return `${this.name}: ${this.message}`;
+  }
 }

@@ -34,8 +34,13 @@ function serve(listener: TcpListener | { port: number; hostname: string; }, hand
 
     case "deno": {
       const addr = Tcp.unstable_local_addr(listenerUnion);
-      const port = SocketAddr.port(addr);
-      const hostname = Ip.toString(SocketAddr.ip(addr));
+
+      if (!SocketAddr.isV4(addr)) {
+        throw new Error("An issue happened with the addr.");
+      }
+
+      const port = SocketAddr.v4.port(addr);
+      const hostname = Ip.toString(SocketAddr.v4.ip(addr));
 
       Deno.serve({ port, hostname }, handler);
       return {};
