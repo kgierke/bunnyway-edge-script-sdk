@@ -1,5 +1,11 @@
 # @bunny.net/edgescript-sdk
 
+## 0.8.1
+
+### Patch Changes
+
+- 0698b9b: Change IP separator from ',' to '.' when printing
+
 ## 0.8.0
 
 ### Minor Changes
