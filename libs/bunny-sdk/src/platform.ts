@@ -72,7 +72,7 @@ const internal_getPlatform = (): Platform => {
   // Check if Node.js
   if (
     Object.prototype.toString.call(
-      typeof process !== "undefined" ? process : 0,
+      typeof globalThis.process !== "undefined" ? process : 0,
     ) === "[object process]"
   ) {
     return {
