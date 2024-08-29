@@ -1,5 +1,12 @@
 # @bunny.net/edgescript-sdk
 
+## 0.10.0
+
+### Minor Changes
+
+- 3ba61ac: New overloading for serve to avoid putting listener
+- 49b0fa1: serve function should have the handler as first arg
+
 ## 0.9.3
 
 ### Patch Changes
