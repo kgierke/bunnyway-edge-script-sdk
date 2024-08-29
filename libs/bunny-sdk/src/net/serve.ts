@@ -16,9 +16,9 @@ type ServeHandler = {} & unknown;
 /**
  * Serves HTTP requests on the given [TcpListener]
  */
-function serve(listener: { port: number; hostname: string; }, handler: ServerHandler): ServeHandler;
-function serve(listener: TcpListener, handler: ServerHandler): ServeHandler;
-function serve(listener: TcpListener | { port: number; hostname: string; }, handler: ServerHandler): ServeHandler {
+function serve(handler: ServerHandler, listener: { port: number; hostname: string; }): ServeHandler;
+function serve(handler: ServerHandler, listener: TcpListener): ServeHandler;
+function serve(handler: ServerHandler, listener?: TcpListener | { port: number; hostname: string; },): ServeHandler {
   const platform = internal_getPlatform();
 
   const listenerUnion = Tcp.isTcpListener(listener) ? listener : Tcp.unstable_new();
