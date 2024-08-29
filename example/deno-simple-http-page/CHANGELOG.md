@@ -1,5 +1,13 @@
 # example/deno-simple-http-page
 
+## 0.2.20
+
+### Patch Changes
+
+- Updated dependencies [3ba61ac]
+- Updated dependencies [49b0fa1]
+  - @bunny.net/edgescript-sdk@0.10.0
+
 ## 0.2.19
 
 ### Patch Changes
