@@ -60,3 +60,15 @@ export function unstable_new(): TcpListener {
   }
 }
 
+
+/**
+  * Bind an Addr
+  */
+export function bind(addr: SocketAddr.v4.SocketAddrV4): TcpListener {
+  // TODO: Add a proper bind to ensure the port is available.
+
+  return ({
+    _tag: 'TcpListener',
+    addr,
+  });
+}
