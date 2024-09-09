@@ -3,7 +3,11 @@ import * as NodeImpl from "./_impl/node/serve.ts";
 import { TcpListener } from "./tcp.ts";
 import * as Tcp from "./tcp.ts";
 import * as Ip from "./ip.ts";
-import * as SocketAddr from './socket_addr.ts';
+import * as SocketAddr from "./socket_addr.ts";
+
+function isResponse(value: unknown) {
+  return value instanceof Response;
+}
 
 /**
  * A handler for HTTP Requests.
@@ -17,24 +21,38 @@ type ServeHandler = {} & unknown;
  * Serves HTTP requests on the given [TcpListener]
  */
 
-function is_port_and_hostname(value: unknown): value is { port: number; hostname: string; } {
+function is_port_and_hostname(
+  value: unknown,
+): value is { port: number; hostname: string } {
   if (typeof value === "object" && value !== null) {
     const port = value["port"];
-    return port !== undefined && typeof port === "number" && value["hostname"] !== undefined;
+    return port !== undefined && typeof port === "number" &&
+      value["hostname"] !== undefined;
   }
 
   return false;
 }
 
+/**
+ * Serves HTTP requests with the provided handler.
+ */
 function serve(handler: ServerHandler): ServeHandler;
-function serve(listener: { port: number; hostname: string; }, handler: ServerHandler): ServeHandler;
+function serve(
+  listener: { port: number; hostname: string },
+  handler: ServerHandler,
+): ServeHandler;
 function serve(listener: TcpListener, handler: ServerHandler): ServeHandler;
-function serve(listener: ServerHandler | { port: number; hostname: string; } | TcpListener, handler?: ServerHandler): ServeHandler {
+function serve(
+  listener: ServerHandler | { port: number; hostname: string } | TcpListener,
+  handler?: ServerHandler,
+): ServeHandler {
   let raw_handler: ServerHandler | undefined;
   let raw_listener: TcpListener;
 
   if (is_port_and_hostname(listener)) {
-    const addr = SocketAddr.v4.tryFromString(`${listener.hostname}:${listener.port}`);
+    const addr = SocketAddr.v4.tryFromString(
+      `${listener.hostname}:${listener.port}`,
+    );
     if (addr instanceof Error) {
       throw addr;
     }
@@ -82,8 +100,171 @@ function serve(listener: ServerHandler | { port: number; hostname: string; } | T
   }
 }
 
-export {
-  serve,
-  ServeHandler,
-  ServerHandler,
+type PullZoneHandlerOptions = {
+  url: string;
+};
+
+type OriginRequestContext = {
+  request: Request,
+};
+
+type OriginResponseContext = {
+  response: Response,
+};
+
+type PullZoneHandler = {
+  /**
+   * Add a Middleware for the requests being processed.
+   */
+  onOriginRequest: (middleware: (
+    ctx: OriginRequestContext,
+  ) => Promise<Request> | Promise<Response>) => PullZoneHandler;
+
+  /**
+   * Add a Middleware for the response being processed.
+   */
+  onOriginResponse: (middleware: (
+    ctx: OriginResponseContext,
+  ) => Promise<Response>) => PullZoneHandler;
+};
+
+/**
+ * Serves HTTP requests for a PullZone
+ *
+ * If you have an associated PullZone within Bunny, we'll use it on production
+ * and for local development you can configure it with the `url` option.
+ */
+function servePullZone(options: PullZoneHandlerOptions): PullZoneHandler;
+function servePullZone(
+  listener: { port: number; hostname: string },
+  options: PullZoneHandlerOptions,
+): PullZoneHandler;
+function servePullZone(
+  listener: TcpListener,
+  options: PullZoneHandlerOptions,
+): PullZoneHandler;
+function servePullZone(
+  listener?:
+    | PullZoneHandlerOptions
+    | { port: number; hostname: string }
+    | TcpListener,
+  options?: PullZoneHandlerOptions,
+): PullZoneHandler {
+  let raw_listener: TcpListener;
+  let raw_options: PullZoneHandlerOptions = {
+    url: "https://bunny.net"
+  };
+
+  if (options) {
+    raw_options = options;
+  }
+
+  if (is_port_and_hostname(listener)) {
+    const addr = SocketAddr.v4.tryFromString(
+      `${listener.hostname}:${listener.port}`,
+    );
+    if (addr instanceof Error) {
+      throw addr;
+    }
+    raw_listener = Tcp.bind(addr);
+  } else if (Tcp.isTcpListener(listener)) {
+    raw_listener = listener;
+  } else {
+    if (listener) {
+      raw_options = listener;
+    }
+    raw_listener = Tcp.unstable_new();
+  }
+
+  const onOriginRequestMiddleware: Array<(
+    ctx: OriginRequestContext,
+  ) => Promise<Request> | Promise<Response>> = [];
+  const onOriginResponseMiddleware: Array<(
+    ctx: OriginResponseContext,
+  ) => Promise<Response>> = [];
+
+  const platform = internal_getPlatform();
+
+  switch (platform.runtime) {
+    case "bunny": {
+      Bunny.v1.registerMiddlewares({ onOriginRequest: onOriginRequestMiddleware, onOriginResponse: onOriginResponseMiddleware });
+      break;
+    }
+    default: {
+      const middlewareHandler: ServerHandler = async (req) => {
+
+        let mutableRequest = new Request(raw_options.url, { ...req as unknown as RequestInit });
+
+        // Request Middleware
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        for (const [_, mid] of onOriginRequestMiddleware.entries()) {
+          const reqOrResponse = await mid({ request: mutableRequest });
+          if (isResponse(reqOrResponse)) {
+            return reqOrResponse;
+          }
+          mutableRequest = reqOrResponse;
+        }
+
+        const prevResponse = await fetch(mutableRequest);
+
+        const headers = new Headers();
+        for (const [key, value] of prevResponse.headers.entries()) {
+          headers.set(key, value);
+        }
+
+        let response: Response;
+
+        // Only for node
+        switch (platform.runtime) {
+          case "node": {
+            if (headers.get("content-type") === "text/html" && prevResponse.body !== null) {
+              const body = await prevResponse.text();
+              headers.delete("content-encoding");
+              response = new Response(body, { headers });
+            } else {
+              response = new Response(prevResponse.body, { ...prevResponse, headers });
+            }
+
+            break;
+          }
+          default: {
+            response = new Response(prevResponse.body, { ...prevResponse, headers });
+          }
+        }
+
+        // Response Middleware
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        for (const [_, mid] of onOriginResponseMiddleware.entries()) {
+          const reqOrResponse = await mid({ response });
+          if (isResponse(reqOrResponse)) {
+            return reqOrResponse;
+          }
+          mutableRequest = reqOrResponse;
+        }
+
+        return response;
+      };
+
+      // @ts-ignore
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const handler = serve(raw_listener, middlewareHandler);
+    }
+  }
+
+  let pullzoneHandler = ({
+  }) as PullZoneHandler;
+
+  pullzoneHandler.onOriginResponse = (middleware) => {
+    onOriginResponseMiddleware.push(middleware);
+    return pullzoneHandler;
+  };
+
+  pullzoneHandler.onOriginRequest = (middleware) => {
+    onOriginRequestMiddleware.push(middleware);
+    return pullzoneHandler;
+  };
+
+  return pullzoneHandler;
 }
+
+export { serve, ServeHandler, servePullZone, ServerHandler };

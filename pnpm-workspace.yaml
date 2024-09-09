@@ -2,3 +2,5 @@ packages:
   - 'libs/bunny-sdk'
   - 'example/simple-http-page'
   - 'example/deno-simple-http-page'
+  - 'example/deno-middleware-http'
+  - 'example/middleware-simple-http'
