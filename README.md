@@ -29,7 +29,7 @@ Network for your deployed script.
 With `@bunny.net/edgescript-sdk` you can write a script which will work with
 Deno, with Node, and within our network.
 
-```
+```typescript
 import * as BunnySDK from "@bunny.net/edgescript-sdk";
 
 function sleep(ms: number): Promise<void> {
