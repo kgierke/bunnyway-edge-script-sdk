@@ -245,13 +245,11 @@ function servePullZone(
         return response;
       };
 
-      // @ts-ignore
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      const handler = serve(raw_listener, middlewareHandler);
+      serve(raw_listener, middlewareHandler);
     }
   }
 
-  let pullzoneHandler = ({
+  const pullzoneHandler = ({
   }) as PullZoneHandler;
 
   pullzoneHandler.onOriginResponse = (middleware) => {
