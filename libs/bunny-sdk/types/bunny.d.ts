@@ -14,10 +14,10 @@ declare namespace Bunny {
     registerMiddlewares: (middlewares: {
       onOriginRequest: Array<(
         ctx: { request: Request },
-      ) => Promise<Request> | Promise<Response>>
+      ) => Promise<Request> | Promise<Response> | undefined>
       onOriginResponse: Array<(
-        ctx: { response: Response },
-      ) => Promise<Request> | Promise<Response>>
+        ctx: { request: Request, response: Response },
+      ) => Promise<Request> | Promise<Response> | undefined>
     }) => void,
   };
 

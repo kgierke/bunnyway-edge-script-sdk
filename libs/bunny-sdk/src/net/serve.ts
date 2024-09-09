@@ -9,6 +9,11 @@ function isResponse(value: unknown) {
   return value instanceof Response;
 }
 
+function isRequest(value: unknown) {
+  return value instanceof Request;
+}
+
+
 /**
  * A handler for HTTP Requests.
  * Consumes a request and return a response.
@@ -109,6 +114,7 @@ type OriginRequestContext = {
 };
 
 type OriginResponseContext = {
+  request: Request,
   response: Response,
 };
 
@@ -178,10 +184,10 @@ function servePullZone(
 
   const onOriginRequestMiddleware: Array<(
     ctx: OriginRequestContext,
-  ) => Promise<Request> | Promise<Response>> = [];
+  ) => Promise<Request> | Promise<Response> | undefined> = [];
   const onOriginResponseMiddleware: Array<(
     ctx: OriginResponseContext,
-  ) => Promise<Response>> = [];
+  ) => Promise<Response> | undefined> = [];
 
   const platform = internal_getPlatform();
 
@@ -202,7 +208,9 @@ function servePullZone(
           if (isResponse(reqOrResponse)) {
             return reqOrResponse;
           }
-          mutableRequest = reqOrResponse;
+          if (isRequest(reqOrResponse)) {
+            mutableRequest = reqOrResponse;
+          }
         }
 
         const prevResponse = await fetch(mutableRequest);
@@ -235,11 +243,10 @@ function servePullZone(
         // Response Middleware
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         for (const [_, mid] of onOriginResponseMiddleware.entries()) {
-          const reqOrResponse = await mid({ response });
+          const reqOrResponse = await mid({ request: mutableRequest, response });
           if (isResponse(reqOrResponse)) {
-            return reqOrResponse;
+            response = reqOrResponse;
           }
-          mutableRequest = reqOrResponse;
         }
 
         return response;
