@@ -15,13 +15,13 @@ importers:
   example/deno-middleware-http:
     dependencies:
       '@bunny.net/edgescript-sdk':
-        specifier: ^0.10.0
+        specifier: ^0.11.0
         version: link:../../libs/bunny-sdk
 
   example/deno-simple-http-page:
     dependencies:
       '@bunny.net/edgescript-sdk':
-        specifier: ^0.10.0
+        specifier: ^0.11.0
         version: link:../../libs/bunny-sdk
 
   example/middleware-simple-http:

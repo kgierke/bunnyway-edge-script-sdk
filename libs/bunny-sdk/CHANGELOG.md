@@ -1,5 +1,11 @@
 # @bunny.net/edgescript-sdk
 
+## 0.11.0
+
+### Minor Changes
+
+- c536c15: Add middleware for local development
+
 ## 0.10.0
 
 ### Minor Changes
