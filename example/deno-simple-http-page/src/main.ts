@@ -5,7 +5,7 @@ function sleep(ms: number): Promise<void> {
 }
 
 console.log("Starting server...");
-BunnySDK.net.http.serve({}, async (req) => {
+BunnySDK.net.http.serve(async (req) => {
   console.log(`[INFO]: ${req.method} - ${req.url}`);
   await sleep(1);
   return new Response("blbl");
