@@ -1,5 +1,11 @@
 # @bunny.net/edgescript-sdk
 
+## 0.11.2
+
+### Patch Changes
+
+- 54e064e: Ensure proper property passing for middleware url
+
 ## 0.11.1
 
 ### Patch Changes
