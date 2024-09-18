@@ -1,5 +1,11 @@
 # @bunny.net/edgescript-sdk
 
+## 0.11.1
+
+### Patch Changes
+
+- ea59365: Fix issue while passing header in local mode"
+
 ## 0.11.0
 
 ### Minor Changes
