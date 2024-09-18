@@ -13,7 +13,6 @@ function isRequest(value: unknown) {
   return value instanceof Request;
 }
 
-
 /**
  * A handler for HTTP Requests.
  * Consumes a request and return a response.
@@ -110,28 +109,32 @@ type PullZoneHandlerOptions = {
 };
 
 type OriginRequestContext = {
-  request: Request,
+  request: Request;
 };
 
 type OriginResponseContext = {
-  request: Request,
-  response: Response,
+  request: Request;
+  response: Response;
 };
 
 type PullZoneHandler = {
   /**
    * Add a Middleware for the requests being processed.
    */
-  onOriginRequest: (middleware: (
-    ctx: OriginRequestContext,
-  ) => Promise<Request> | Promise<Response>) => PullZoneHandler;
+  onOriginRequest: (
+    middleware: (
+      ctx: OriginRequestContext,
+    ) => Promise<Request> | Promise<Response>,
+  ) => PullZoneHandler;
 
   /**
    * Add a Middleware for the response being processed.
    */
-  onOriginResponse: (middleware: (
-    ctx: OriginResponseContext,
-  ) => Promise<Response>) => PullZoneHandler;
+  onOriginResponse: (
+    middleware: (
+      ctx: OriginResponseContext,
+    ) => Promise<Response>,
+  ) => PullZoneHandler;
 };
 
 /**
@@ -158,7 +161,7 @@ function servePullZone(
 ): PullZoneHandler {
   let raw_listener: TcpListener;
   let raw_options: PullZoneHandlerOptions = {
-    url: "https://bunny.net"
+    url: "https://bunny.net",
   };
 
   if (options) {
@@ -182,24 +185,33 @@ function servePullZone(
     raw_listener = Tcp.unstable_new();
   }
 
-  const onOriginRequestMiddleware: Array<(
-    ctx: OriginRequestContext,
-  ) => Promise<Request> | Promise<Response> | undefined> = [];
-  const onOriginResponseMiddleware: Array<(
-    ctx: OriginResponseContext,
-  ) => Promise<Response> | undefined> = [];
+  const onOriginRequestMiddleware: Array<
+    (
+      ctx: OriginRequestContext,
+    ) => Promise<Request> | Promise<Response> | undefined
+  > = [];
+  const onOriginResponseMiddleware: Array<
+    (
+      ctx: OriginResponseContext,
+    ) => Promise<Response> | undefined
+  > = [];
 
   const platform = internal_getPlatform();
 
   switch (platform.runtime) {
     case "bunny": {
-      Bunny.v1.registerMiddlewares({ onOriginRequest: onOriginRequestMiddleware, onOriginResponse: onOriginResponseMiddleware });
+      Bunny.v1.registerMiddlewares({
+        onOriginRequest: onOriginRequestMiddleware,
+        onOriginResponse: onOriginResponseMiddleware,
+      });
       break;
     }
     default: {
       const middlewareHandler: ServerHandler = async (req) => {
-
-        let mutableRequest = new Request(raw_options.url, { ...req as unknown as RequestInit });
+        let mutableRequest = new Request(
+          raw_options.url,
+          req as unknown as RequestInit,
+        );
 
         // Request Middleware
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -225,25 +237,37 @@ function servePullZone(
         // Only for node
         switch (platform.runtime) {
           case "node": {
-            if (headers.get("content-type") === "text/html" && prevResponse.body !== null) {
+            if (
+              headers.get("content-type") === "text/html" &&
+              prevResponse.body !== null
+            ) {
               const body = await prevResponse.text();
               headers.delete("content-encoding");
               response = new Response(body, { headers });
             } else {
-              response = new Response(prevResponse.body, { ...prevResponse, headers });
+              response = new Response(prevResponse.body, {
+                ...prevResponse,
+                headers,
+              });
             }
 
             break;
           }
           default: {
-            response = new Response(prevResponse.body, { ...prevResponse, headers });
+            response = new Response(prevResponse.body, {
+              ...prevResponse,
+              headers,
+            });
           }
         }
 
         // Response Middleware
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         for (const [_, mid] of onOriginResponseMiddleware.entries()) {
-          const reqOrResponse = await mid({ request: mutableRequest, response });
+          const reqOrResponse = await mid({
+            request: mutableRequest,
+            response,
+          });
           if (isResponse(reqOrResponse)) {
             response = reqOrResponse;
           }
@@ -256,8 +280,7 @@ function servePullZone(
     }
   }
 
-  const pullzoneHandler = ({
-  }) as PullZoneHandler;
+  const pullzoneHandler = ({}) as PullZoneHandler;
 
   pullzoneHandler.onOriginResponse = (middleware) => {
     onOriginResponseMiddleware.push(middleware);
