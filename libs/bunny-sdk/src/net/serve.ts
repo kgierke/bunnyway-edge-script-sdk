@@ -208,8 +208,15 @@ function servePullZone(
     }
     default: {
       const middlewareHandler: ServerHandler = async (req) => {
+        const url = new URL(req.url);
+        const origin_url = new URL(raw_options.url);
+
+        url.protocol = origin_url.protocol;
+        url.hostname = origin_url.hostname;
+        url.port = origin_url.port;
+
         let mutableRequest = new Request(
-          raw_options.url,
+          url,
           req as unknown as RequestInit,
         );
 
