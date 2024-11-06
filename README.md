@@ -55,6 +55,3 @@ redirect to the associated Bunny Script.
 You have a full list of examples in the [example folder](./example/) you can
 use.
 
-## Documentation
-
-Documentation is always a WIP, but definitly it'll come soon!
