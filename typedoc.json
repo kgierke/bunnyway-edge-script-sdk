@@ -1,0 +1,9 @@
+{
+  "entryPoints": [
+    "libs/*"
+  ],
+  "name": "Edge Script SDK Documentation",
+  "entryPointStrategy": "packages",
+  "includeVersion": false,
+  "readme": "./README.md"
+}

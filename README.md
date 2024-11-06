@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://bunny.net">
-    <img src="https://github.com/BunnyWay/edge-script-sdk/blob/main/docs/images/bunny.png?raw=true" width="500" height="auto" alt="Bunny"/>
+    <img src="https://github.com/BunnyWay/edge-script-sdk/blob/main/asset/bunny.png?raw=true" width="500" height="auto" alt="Bunny"/>
   </a>
 </div>
 

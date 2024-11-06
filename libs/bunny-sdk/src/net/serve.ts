@@ -104,20 +104,20 @@ function serve(
   }
 }
 
-type PullZoneHandlerOptions = {
+export type PullZoneHandlerOptions = {
   url: string;
 };
 
-type OriginRequestContext = {
+export type OriginRequestContext = {
   request: Request;
 };
 
-type OriginResponseContext = {
+export type OriginResponseContext = {
   request: Request;
   response: Response;
 };
 
-type PullZoneHandler = {
+export type PullZoneHandler = {
   /**
    * Add a Middleware for the requests being processed.
    */
