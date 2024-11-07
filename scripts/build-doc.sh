@@ -5,7 +5,8 @@ cd "$repo_base"
 
 echo "Creating doc for bunny-sdk"
 cd libs/bunny-sdk/
-npx typedoc --json ../../docs-json/sdk-$(cat package.json | jq -r '.version').json --options typedoc.json --validation.invalidLink false --name $(cat package.json | jq -r '.name')/$(cat package.json | jq -r '.version') --includeVersion true
+npx typedoc --json ../../docs-json/sdk-latest.json --options typedoc.json --validation.invalidLink false --name "$(cat package.json | jq -r '.name')/latest" --includeVersion true
+npx typedoc --json ../../docs-json/sdk-$(cat package.json | jq -r '.version').json --options typedoc.json --validation.invalidLink false --name $(cat package.json | jq -r '.name')/$(cat package.json | jq -r '.version') --includeVersion false
 
 cd "$repo_base"
 npx typedoc --entryPointStrategy merge "docs-json/*.json"

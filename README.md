@@ -42,4 +42,3 @@ If you execute this code on a deployed Bunny.net Edge Scripting script, the serv
 be used to execute requests on a connected PullZone.
 
 Full list of examples is in the [example folder](./example/).
-
