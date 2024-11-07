@@ -4,12 +4,12 @@
   </a>
 </div>
 
-# Bunny.net - edgescript-sdk
+# bunny.net - edgescript-sdk
 
-This repository contains SDK to enable local development of Bunny.net Edge Scripting: `@bunny.net/edgescript-sdk`
+This repository contains SDK to enable local development of bunny.net Edge Scripting: `@bunny.net/edgescript-sdk`
 
-Bunny.net Edge Scripting is built with a custom Deno runtime that runs on the Bunny.net Edge Scripting. 
-This SDK provides similar environment to Bunny.net Edge Scripting locally, 
+Bunny.net Edge Scripting is built with a custom Deno runtime that runs on the bunny.net Edge Scripting. 
+This SDK provides similar environment to bunny.net Edge Scripting locally, 
 so that you can run and debug scripts in your local environment before publishing them.
 
 > Even if the Bunny Runtime is very similar to the Deno & Node Runtime, some API
@@ -38,7 +38,7 @@ BunnySDK.net.http.serve({ port: 8080, hostname: '127.0.0.1' }, async (req) => {
 });
 ```
 
-If you execute this code on a deployed Bunny.net Edge Scripting script, the serve function will
+If you execute this code on a deployed bunny.net Edge Scripting script, the serve function will
 be used to execute requests on a connected PullZone.
 
 Full list of examples is in the [example folder](./example/).
