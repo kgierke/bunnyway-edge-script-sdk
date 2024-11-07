@@ -14,7 +14,7 @@ Under the hood, Bunny Edge Scripting is built on Deno, and includes a custom run
 
 ## 🥕 Usage
 
-With `@bunny.net/edgescript-sdk`, you can write scripts that run smoothly on Deno, Node, and within the bunny.net network.
+With `@bunny.net/edgescript-sdk`, you can write scripts that run smoothly on Deno, Node, and within the bunny.net network. Below is a quick example to help you get started with setting up a local server. For additional examples and use cases, refer to the [examples folder](./example/).
 
 ### Hello World Example
 ```typescript
@@ -48,5 +48,3 @@ Once deployed, Bunny’s serve function processes incoming requests through a co
 
 ## 🚨 Error Handling and Logging
 Bunny Edge Scripting includes built-in logging to support error tracking and observability. Use console.log, console.warn, and console.error statements within your code to monitor application flow, debug issues, and gather insights both locally and in deployment.
-
-For additional examples and use cases, refer to the [examples folder](./example/).
