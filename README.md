@@ -4,25 +4,18 @@
   </a>
 </div>
 
-# Bunny - edgescript-sdk
+# Bunny.net - edgescript-sdk
 
-This repository contains one library for now: the `@bunny.net/edgescript-sdk`
-which is a little lib which intend to help you develop applications running 
-over [Bunny](https://bunny.net).
+This repository contains SDK to enable local development of Bunny.net Edge Scripting: `@bunny.net/edgescript-sdk`
 
-We choose to run Bunny Scripts with a Deno modified runtime that leverage our
-networks and products. To be able to also develop locally as if you were inside
-the Bunny Network, we are creating a library which will help you leveraging your
-prefered Javascript/Typescript environment locally and benefit from the Bunny
-Network for your deployed script.
+Bunny Edge Scripting is built with a Deno modified runtime that leverage our
+networks and products. This SDK provides similar environment to Bunny.net Edge Scripting
+locally, so that you can run and debug scripts in your local environment before publishing them.
 
 > Even if the Bunny Runtime is very similar to the Deno & Node Runtime, some API
-> might differ or not being available due to the fact we leverage our network
+> might differ or not being available due to the fact we leverage our CDN
 > and run scripts in a serverless environment.
 >
-> We also have a roadmap and some items are just not priorized yet, if you want
-> to have those available, reach out to us any times!
-
 
 ## Usage
 
@@ -46,11 +39,7 @@ BunnySDK.net.http.serve({ port: 8080, hostname: '127.0.0.1' }, async (req) => {
 ```
 
 If you execute this code on a deployed Bunny Script, the serve function will
-always be used to allow requests that goes from your PullZone (let's assume you
-have `https://domain-test.b-cdn.net` as a PullZone).
-
-In this case, every curl request to `https://domain-test.b-cdn.net` will be
-redirect to the associated Bunny Script.
+always be used to execute requests on a connected PullZone.
 
 You have a full list of examples in the [example folder](./example/) you can
 use.
