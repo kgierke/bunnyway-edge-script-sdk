@@ -4,7 +4,8 @@
   </a>
 </div>
 
-# bunny.net - Bunny Edge Scripting SDK
+### bunny.net
+# Bunny Edge Scripting SDK
 
 This repository contains `@bunny.net/edgescript-sdk`, a library designed to simplify the development and testing of applications on the Bunny Edge Scripting platform. With this SDK, you can build, debug, and run scripts locally, then deploy them seamlessly to Bunny’s global edge network for production.
 
