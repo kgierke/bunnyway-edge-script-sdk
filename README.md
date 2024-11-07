@@ -11,7 +11,7 @@ Welcome to the Bunny Edge Scripting SDK repository! This library, `@bunny.net/ed
 Under the hood, Bunny Edge Scripting is built on top of Deno. To provide a seamless integration, Edge Scripting provides a custom runtime that was designed to run scripts interchangibly between a local environment, and across the bunny.net edge network. This SDK replicates a similar environment locally, allowing you to develop and debug your scripts before deploying them.
 
 > Note: The Bunny Runtime attempts to closely match the behavior of Deno and Node runtimes, but certain APIs
-> may be different or be unavailable due to the unique platform requirements of running applications in a serverless CDN environment.
+> may be different or unavailable due to the unique platform requirements of running applications in a serverless CDN environment.
 
 ## Usage
 
