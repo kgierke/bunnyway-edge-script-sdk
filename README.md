@@ -13,7 +13,7 @@ Under the hood, Bunny Edge Scripting is built on top of Deno. To provide a seaml
 > Note: The Bunny Runtime attempts to closely match the behavior of Deno and Node runtimes, but certain APIs
 > may be different or be unavailable due to the unique platform requirements of running applications in a serverless CDN environment.
 
-## Basic Usage
+## Usage
 
 With @bunny.net/edgescript-sdk, you can create scripts that run seamlessly on Deno,
 Node, and within the bunny.net network.
