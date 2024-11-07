@@ -16,6 +16,7 @@ Under the hood, Bunny Edge Scripting is built on Deno, and includes a custom run
 
 With `@bunny.net/edgescript-sdk`, you can write scripts that run smoothly on Deno, Node, and within the bunny.net network.
 
+### Hello World Example
 ```typescript
 import * as BunnySDK from "@bunny.net/edgescript-sdk";
 
