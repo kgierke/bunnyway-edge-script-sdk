@@ -4,19 +4,16 @@
   </a>
 </div>
 
-# bunny.net - EdgeScript SDK
+# bunny.net - Bunny Edge Scripting SDK
 
-This repository contains the SDK for local development of bunny.net Edge Scripting `@bunny.net/edgescript-sdk`
+Welcome to the Bunny Edge Scripting SDK repository! This library, `@bunny.net/edgescript-sdk`, provides a seamless way to develop and test applications for the Bunny Edge Scripting platform. With this SDK, you can build, debug, and run scripts locally and later deploy them effortlessly to Bunny’s global edge network into a production environment.
 
-Bunny.net Edge Scripting uses a custom Deno runtime, designed to run scripts across the bunny.net edge network. 
-This SDK replicates a similar environment locally, allowing you to develop and debug your scripts before deploying them.
+Under the hood, Bunny Edge Scripting is built on top of Deno. To provide a seamless integration, Edge Scripting provides a custom runtime that was designed to run scripts interchangibly between a local environment, and across the bunny.net edge network. This SDK replicates a similar environment locally, allowing you to develop and debug your scripts before deploying them.
 
-> Note: While the Bunny Runtime shares many similarities with Deno and Node runtimes,
-> certain APIs may differ or be unavailable due to the unique characteristics of
-> running scripts in a serverless CDN environment.
->
+> Note: The Bunny Runtime attempts to closely match the behavior of Deno and Node runtimes, but certain APIs
+> may be different or be unavailable due to the unique platform requirements of running applications in a serverless CDN environment.
 
-## Usage
+## Basic Usage
 
 With @bunny.net/edgescript-sdk, you can create scripts that run seamlessly on Deno,
 Node, and within the bunny.net network.
@@ -37,7 +34,14 @@ BunnySDK.net.http.serve({ port: 8080, hostname: '127.0.0.1' }, async (req) => {
 });
 ```
 
-When executed on a deployed bunny.net Edge Scripting script, the serve function processes incoming 
-requests through a connected PullZone.
+This code sets up a local HTTP server using the Bunny Edge Scripting SDK. You can access the server at 127.0.0.1:8080 and see it log incoming requests in real-time. This setup closely resembles how your script will handle requests on Bunny's edge network.
+
+## Deploying to Bunny Edge
+Once you’ve developed and tested your code locally, deploying to Bunny Edge Scripting is simple. Push your code to your Bunny Edge Scripting project’s GitHub repository, and it will automatically be deployed across Bunny’s global CDN.
+
+Once deployed, Bunny’s serve function processes incoming requests via a connected Pull Zone, enabling your application to deliver data at the edge with optimal speed and minimal latency.
+
+## Error Handling and Logging
+To assist with debugging and enhance observability, Bunny Edge Scripting includes built-in logging support. Use console.log, console.warn, and console.error statements within your code to track application flow, errors, and other details during local development and edge deployment.
 
 For more examples, refer to the [examples folder](./example/).
