@@ -39,7 +39,7 @@ This example sets up a local HTTP server using the Bunny Edge Scripting SDK. You
 
 - **`port`**: The port on which the server will listen for incoming HTTP requests. In this example, `8080` is specified, so you can access the server at [http://127.0.0.1:8080](http://127.0.0.1:8080).
   
-- **`hostname`**: The hostname or IP address for the server. Here, `'127.0.0.1'` restricts the server to listen only on the local machine (l
+- **`hostname`**: The hostname or IP address for the server. Here, `'127.0.0.1'` restricts the server to listen only on the local machine (localhost). To make it accessible over the network, you could set it to `'0.0.0.0'`, allowing other devices to connect to the server.
 
 ## 🚀 Deploying to Bunny Edge
 After local development and testing, deploying to Bunny Edge Scripting is straightforward. Simply push your code to your Bunny Edge Scripting project’s GitHub repository, and it will be automatically deployed across Bunny’s global CDN.
