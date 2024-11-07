@@ -15,28 +15,28 @@
 				"summary": [
 					{
 						"kind": "text",
-						"text": "Docs for "
-					},
-					{
-						"kind": "code",
-						"text": "`net`"
-					},
-					{
-						"kind": "text",
-						"text": " module"
+						"text": "Networking primitives to be used for communication.\n\nThe Bunny Network only exposed scripts through a domain name for now, the\nnetworking stack accessible here reflect what is possible to expose through\nBunny Edge Scripting."
 					}
 				]
 			},
 			"children": [
 				{
-					"id": 66,
+					"id": 2,
 					"name": "http",
 					"variant": "declaration",
 					"kind": 4,
 					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Networking Primitives for the HTTP(s) protocol."
+							}
+						]
+					},
 					"children": [
 						{
-							"id": 70,
+							"id": 6,
 							"name": "OriginRequestContext",
 							"variant": "declaration",
 							"kind": 2097152,
@@ -44,21 +44,21 @@
 							"sources": [
 								{
 									"fileName": "libs/bunny-sdk/src/net/serve.ts",
-									"line": 111,
+									"line": 123,
 									"character": 12
 								}
 							],
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 71,
+									"id": 7,
 									"name": "__type",
 									"variant": "declaration",
 									"kind": 65536,
 									"flags": {},
 									"children": [
 										{
-											"id": 72,
+											"id": 8,
 											"name": "request",
 											"variant": "declaration",
 											"kind": 1024,
@@ -66,7 +66,7 @@
 											"sources": [
 												{
 													"fileName": "libs/bunny-sdk/src/net/serve.ts",
-													"line": 112,
+													"line": 124,
 													"character": 2
 												}
 											],
@@ -86,14 +86,14 @@
 										{
 											"title": "Properties",
 											"children": [
-												72
+												8
 											]
 										}
 									],
 									"sources": [
 										{
 											"fileName": "libs/bunny-sdk/src/net/serve.ts",
-											"line": 111,
+											"line": 123,
 											"character": 35
 										}
 									]
@@ -101,7 +101,7 @@
 							}
 						},
 						{
-							"id": 73,
+							"id": 9,
 							"name": "OriginResponseContext",
 							"variant": "declaration",
 							"kind": 2097152,
@@ -109,21 +109,21 @@
 							"sources": [
 								{
 									"fileName": "libs/bunny-sdk/src/net/serve.ts",
-									"line": 115,
+									"line": 127,
 									"character": 12
 								}
 							],
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 74,
+									"id": 10,
 									"name": "__type",
 									"variant": "declaration",
 									"kind": 65536,
 									"flags": {},
 									"children": [
 										{
-											"id": 75,
+											"id": 11,
 											"name": "request",
 											"variant": "declaration",
 											"kind": 1024,
@@ -131,7 +131,7 @@
 											"sources": [
 												{
 													"fileName": "libs/bunny-sdk/src/net/serve.ts",
-													"line": 116,
+													"line": 128,
 													"character": 2
 												}
 											],
@@ -147,7 +147,7 @@
 											}
 										},
 										{
-											"id": 76,
+											"id": 12,
 											"name": "response",
 											"variant": "declaration",
 											"kind": 1024,
@@ -155,7 +155,7 @@
 											"sources": [
 												{
 													"fileName": "libs/bunny-sdk/src/net/serve.ts",
-													"line": 117,
+													"line": 129,
 													"character": 2
 												}
 											],
@@ -175,15 +175,15 @@
 										{
 											"title": "Properties",
 											"children": [
-												75,
-												76
+												11,
+												12
 											]
 										}
 									],
 									"sources": [
 										{
 											"fileName": "libs/bunny-sdk/src/net/serve.ts",
-											"line": 115,
+											"line": 127,
 											"character": 36
 										}
 									]
@@ -191,7 +191,7 @@
 							}
 						},
 						{
-							"id": 77,
+							"id": 13,
 							"name": "PullZoneHandler",
 							"variant": "declaration",
 							"kind": 2097152,
@@ -199,21 +199,21 @@
 							"sources": [
 								{
 									"fileName": "libs/bunny-sdk/src/net/serve.ts",
-									"line": 120,
+									"line": 132,
 									"character": 12
 								}
 							],
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 78,
+									"id": 14,
 									"name": "__type",
 									"variant": "declaration",
 									"kind": 65536,
 									"flags": {},
 									"children": [
 										{
-											"id": 79,
+											"id": 15,
 											"name": "onOriginRequest",
 											"variant": "declaration",
 											"kind": 1024,
@@ -229,14 +229,14 @@
 											"sources": [
 												{
 													"fileName": "libs/bunny-sdk/src/net/serve.ts",
-													"line": 124,
+													"line": 136,
 													"character": 2
 												}
 											],
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 80,
+													"id": 16,
 													"name": "__type",
 													"variant": "declaration",
 													"kind": 65536,
@@ -244,20 +244,20 @@
 													"sources": [
 														{
 															"fileName": "libs/bunny-sdk/src/net/serve.ts",
-															"line": 124,
+															"line": 136,
 															"character": 19
 														}
 													],
 													"signatures": [
 														{
-															"id": 81,
+															"id": 17,
 															"name": "__type",
 															"variant": "signature",
 															"kind": 4096,
 															"flags": {},
 															"parameters": [
 																{
-																	"id": 82,
+																	"id": 18,
 																	"name": "middleware",
 																	"variant": "param",
 																	"kind": 32768,
@@ -265,7 +265,7 @@
 																	"type": {
 																		"type": "reflection",
 																		"declaration": {
-																			"id": 83,
+																			"id": 19,
 																			"name": "__type",
 																			"variant": "declaration",
 																			"kind": 65536,
@@ -273,27 +273,27 @@
 																			"sources": [
 																				{
 																					"fileName": "libs/bunny-sdk/src/net/serve.ts",
-																					"line": 125,
+																					"line": 137,
 																					"character": 16
 																				}
 																			],
 																			"signatures": [
 																				{
-																					"id": 84,
+																					"id": 20,
 																					"name": "__type",
 																					"variant": "signature",
 																					"kind": 4096,
 																					"flags": {},
 																					"parameters": [
 																						{
-																							"id": 85,
+																							"id": 21,
 																							"name": "ctx",
 																							"variant": "param",
 																							"kind": 32768,
 																							"flags": {},
 																							"type": {
 																								"type": "reference",
-																								"target": 70,
+																								"target": 6,
 																								"name": "OriginRequestContext",
 																								"package": "@bunny.net/edgescript-sdk"
 																							}
@@ -354,7 +354,7 @@
 															],
 															"type": {
 																"type": "reference",
-																"target": 77,
+																"target": 13,
 																"name": "PullZoneHandler",
 																"package": "@bunny.net/edgescript-sdk"
 															}
@@ -364,7 +364,7 @@
 											}
 										},
 										{
-											"id": 86,
+											"id": 22,
 											"name": "onOriginResponse",
 											"variant": "declaration",
 											"kind": 1024,
@@ -380,14 +380,14 @@
 											"sources": [
 												{
 													"fileName": "libs/bunny-sdk/src/net/serve.ts",
-													"line": 133,
+													"line": 145,
 													"character": 2
 												}
 											],
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 87,
+													"id": 23,
 													"name": "__type",
 													"variant": "declaration",
 													"kind": 65536,
@@ -395,20 +395,20 @@
 													"sources": [
 														{
 															"fileName": "libs/bunny-sdk/src/net/serve.ts",
-															"line": 133,
+															"line": 145,
 															"character": 20
 														}
 													],
 													"signatures": [
 														{
-															"id": 88,
+															"id": 24,
 															"name": "__type",
 															"variant": "signature",
 															"kind": 4096,
 															"flags": {},
 															"parameters": [
 																{
-																	"id": 89,
+																	"id": 25,
 																	"name": "middleware",
 																	"variant": "param",
 																	"kind": 32768,
@@ -416,7 +416,7 @@
 																	"type": {
 																		"type": "reflection",
 																		"declaration": {
-																			"id": 90,
+																			"id": 26,
 																			"name": "__type",
 																			"variant": "declaration",
 																			"kind": 65536,
@@ -424,27 +424,27 @@
 																			"sources": [
 																				{
 																					"fileName": "libs/bunny-sdk/src/net/serve.ts",
-																					"line": 134,
+																					"line": 146,
 																					"character": 16
 																				}
 																			],
 																			"signatures": [
 																				{
-																					"id": 91,
+																					"id": 27,
 																					"name": "__type",
 																					"variant": "signature",
 																					"kind": 4096,
 																					"flags": {},
 																					"parameters": [
 																						{
-																							"id": 92,
+																							"id": 28,
 																							"name": "ctx",
 																							"variant": "param",
 																							"kind": 32768,
 																							"flags": {},
 																							"type": {
 																								"type": "reference",
-																								"target": 73,
+																								"target": 9,
 																								"name": "OriginResponseContext",
 																								"package": "@bunny.net/edgescript-sdk"
 																							}
@@ -479,7 +479,7 @@
 															],
 															"type": {
 																"type": "reference",
-																"target": 77,
+																"target": 13,
 																"name": "PullZoneHandler",
 																"package": "@bunny.net/edgescript-sdk"
 															}
@@ -493,15 +493,15 @@
 										{
 											"title": "Properties",
 											"children": [
-												79,
-												86
+												15,
+												22
 											]
 										}
 									],
 									"sources": [
 										{
 											"fileName": "libs/bunny-sdk/src/net/serve.ts",
-											"line": 120,
+											"line": 132,
 											"character": 30
 										}
 									]
@@ -509,7 +509,7 @@
 							}
 						},
 						{
-							"id": 67,
+							"id": 3,
 							"name": "PullZoneHandlerOptions",
 							"variant": "declaration",
 							"kind": 2097152,
@@ -517,21 +517,21 @@
 							"sources": [
 								{
 									"fileName": "libs/bunny-sdk/src/net/serve.ts",
-									"line": 107,
+									"line": 119,
 									"character": 12
 								}
 							],
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 68,
+									"id": 4,
 									"name": "__type",
 									"variant": "declaration",
 									"kind": 65536,
 									"flags": {},
 									"children": [
 										{
-											"id": 69,
+											"id": 5,
 											"name": "url",
 											"variant": "declaration",
 											"kind": 1024,
@@ -539,7 +539,7 @@
 											"sources": [
 												{
 													"fileName": "libs/bunny-sdk/src/net/serve.ts",
-													"line": 108,
+													"line": 120,
 													"character": 2
 												}
 											],
@@ -553,14 +553,14 @@
 										{
 											"title": "Properties",
 											"children": [
-												69
+												5
 											]
 										}
 									],
 									"sources": [
 										{
 											"fileName": "libs/bunny-sdk/src/net/serve.ts",
-											"line": 107,
+											"line": 119,
 											"character": 37
 										}
 									]
@@ -568,7 +568,7 @@
 							}
 						},
 						{
-							"id": 105,
+							"id": 41,
 							"name": "ServeHandler",
 							"variant": "declaration",
 							"kind": 2097152,
@@ -576,7 +576,7 @@
 							"sources": [
 								{
 									"fileName": "libs/bunny-sdk/src/net/serve.ts",
-									"line": 22,
+									"line": 27,
 									"character": 5
 								}
 							],
@@ -586,7 +586,7 @@
 									{
 										"type": "reflection",
 										"declaration": {
-											"id": 106,
+											"id": 42,
 											"name": "__type",
 											"variant": "declaration",
 											"kind": 65536,
@@ -594,7 +594,7 @@
 											"sources": [
 												{
 													"fileName": "libs/bunny-sdk/src/net/serve.ts",
-													"line": 22,
+													"line": 27,
 													"character": 20
 												}
 											]
@@ -608,7 +608,7 @@
 							}
 						},
 						{
-							"id": 119,
+							"id": 55,
 							"name": "ServerHandler",
 							"variant": "declaration",
 							"kind": 2097152,
@@ -624,14 +624,14 @@
 							"sources": [
 								{
 									"fileName": "libs/bunny-sdk/src/net/serve.ts",
-									"line": 20,
+									"line": 25,
 									"character": 5
 								}
 							],
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 120,
+									"id": 56,
 									"name": "__type",
 									"variant": "declaration",
 									"kind": 65536,
@@ -639,20 +639,20 @@
 									"sources": [
 										{
 											"fileName": "libs/bunny-sdk/src/net/serve.ts",
-											"line": 20,
+											"line": 25,
 											"character": 21
 										}
 									],
 									"signatures": [
 										{
-											"id": 121,
+											"id": 57,
 											"name": "__type",
 											"variant": "signature",
 											"kind": 4096,
 											"flags": {},
 											"parameters": [
 												{
-													"id": 122,
+													"id": 58,
 													"name": "request",
 													"variant": "param",
 													"kind": 32768,
@@ -711,7 +711,7 @@
 							}
 						},
 						{
-							"id": 93,
+							"id": 29,
 							"name": "serve",
 							"variant": "declaration",
 							"kind": 64,
@@ -719,28 +719,28 @@
 							"sources": [
 								{
 									"fileName": "libs/bunny-sdk/src/net/serve.ts",
-									"line": 43,
+									"line": 55,
 									"character": 9
 								},
 								{
 									"fileName": "libs/bunny-sdk/src/net/serve.ts",
-									"line": 44,
+									"line": 56,
 									"character": 9
 								},
 								{
 									"fileName": "libs/bunny-sdk/src/net/serve.ts",
-									"line": 48,
+									"line": 60,
 									"character": 9
 								},
 								{
 									"fileName": "libs/bunny-sdk/src/net/serve.ts",
-									"line": 49,
+									"line": 61,
 									"character": 9
 								}
 							],
 							"signatures": [
 								{
-									"id": 94,
+									"id": 30,
 									"name": "serve",
 									"variant": "signature",
 									"kind": 4096,
@@ -751,25 +751,36 @@
 												"kind": "text",
 												"text": "Serves HTTP requests with the provided handler."
 											}
+										],
+										"blockTags": [
+											{
+												"tag": "@example",
+												"content": [
+													{
+														"kind": "code",
+														"text": "```ts\nimport * as BunnySDK from \"https://esm.sh/@bunny.net/edgescript-sdk@0.11\";\n\nconsole.log(\"Starting server...\");\nBunnySDK.net.http.serve(async (req) => {\n  console.log(`[INFO]: ${req.method} - ${req.url}`);\n  return new Response(\"Hello bunny!\");\n});\n```"
+													}
+												]
+											}
 										]
 									},
 									"sources": [
 										{
 											"fileName": "libs/bunny-sdk/src/net/serve.ts",
-											"line": 43,
+											"line": 55,
 											"character": 9
 										}
 									],
 									"parameters": [
 										{
-											"id": 95,
+											"id": 31,
 											"name": "handler",
 											"variant": "param",
 											"kind": 32768,
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"target": 119,
+												"target": 55,
 												"name": "ServerHandler",
 												"package": "@bunny.net/edgescript-sdk"
 											}
@@ -777,13 +788,13 @@
 									],
 									"type": {
 										"type": "reference",
-										"target": 105,
+										"target": 41,
 										"name": "ServeHandler",
 										"package": "@bunny.net/edgescript-sdk"
 									}
 								},
 								{
-									"id": 96,
+									"id": 32,
 									"name": "serve",
 									"variant": "signature",
 									"kind": 4096,
@@ -791,13 +802,13 @@
 									"sources": [
 										{
 											"fileName": "libs/bunny-sdk/src/net/serve.ts",
-											"line": 44,
+											"line": 56,
 											"character": 9
 										}
 									],
 									"parameters": [
 										{
-											"id": 97,
+											"id": 33,
 											"name": "listener",
 											"variant": "param",
 											"kind": 32768,
@@ -805,14 +816,14 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 98,
+													"id": 34,
 													"name": "__type",
 													"variant": "declaration",
 													"kind": 65536,
 													"flags": {},
 													"children": [
 														{
-															"id": 100,
+															"id": 36,
 															"name": "hostname",
 															"variant": "declaration",
 															"kind": 1024,
@@ -820,7 +831,7 @@
 															"sources": [
 																{
 																	"fileName": "libs/bunny-sdk/src/net/serve.ts",
-																	"line": 45,
+																	"line": 57,
 																	"character": 28
 																}
 															],
@@ -830,7 +841,7 @@
 															}
 														},
 														{
-															"id": 99,
+															"id": 35,
 															"name": "port",
 															"variant": "declaration",
 															"kind": 1024,
@@ -838,7 +849,7 @@
 															"sources": [
 																{
 																	"fileName": "libs/bunny-sdk/src/net/serve.ts",
-																	"line": 45,
+																	"line": 57,
 																	"character": 14
 																}
 															],
@@ -852,15 +863,15 @@
 														{
 															"title": "Properties",
 															"children": [
-																100,
-																99
+																36,
+																35
 															]
 														}
 													],
 													"sources": [
 														{
 															"fileName": "libs/bunny-sdk/src/net/serve.ts",
-															"line": 45,
+															"line": 57,
 															"character": 12
 														}
 													]
@@ -868,14 +879,14 @@
 											}
 										},
 										{
-											"id": 101,
+											"id": 37,
 											"name": "handler",
 											"variant": "param",
 											"kind": 32768,
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"target": 119,
+												"target": 55,
 												"name": "ServerHandler",
 												"package": "@bunny.net/edgescript-sdk"
 											}
@@ -883,13 +894,13 @@
 									],
 									"type": {
 										"type": "reference",
-										"target": 105,
+										"target": 41,
 										"name": "ServeHandler",
 										"package": "@bunny.net/edgescript-sdk"
 									}
 								},
 								{
-									"id": 102,
+									"id": 38,
 									"name": "serve",
 									"variant": "signature",
 									"kind": 4096,
@@ -897,33 +908,33 @@
 									"sources": [
 										{
 											"fileName": "libs/bunny-sdk/src/net/serve.ts",
-											"line": 48,
+											"line": 60,
 											"character": 9
 										}
 									],
 									"parameters": [
 										{
-											"id": 103,
+											"id": 39,
 											"name": "listener",
 											"variant": "param",
 											"kind": 32768,
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"target": 62,
+												"target": 133,
 												"name": "TcpListener",
 												"package": "@bunny.net/edgescript-sdk"
 											}
 										},
 										{
-											"id": 104,
+											"id": 40,
 											"name": "handler",
 											"variant": "param",
 											"kind": 32768,
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"target": 119,
+												"target": 55,
 												"name": "ServerHandler",
 												"package": "@bunny.net/edgescript-sdk"
 											}
@@ -931,7 +942,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"target": 105,
+										"target": 41,
 										"name": "ServeHandler",
 										"package": "@bunny.net/edgescript-sdk"
 									}
@@ -939,7 +950,7 @@
 							]
 						},
 						{
-							"id": 107,
+							"id": 43,
 							"name": "servePullZone",
 							"variant": "declaration",
 							"kind": 64,
@@ -947,28 +958,28 @@
 							"sources": [
 								{
 									"fileName": "libs/bunny-sdk/src/net/serve.ts",
-									"line": 146,
+									"line": 192,
 									"character": 9
 								},
 								{
 									"fileName": "libs/bunny-sdk/src/net/serve.ts",
-									"line": 147,
+									"line": 193,
 									"character": 9
 								},
 								{
 									"fileName": "libs/bunny-sdk/src/net/serve.ts",
-									"line": 151,
+									"line": 197,
 									"character": 9
 								},
 								{
 									"fileName": "libs/bunny-sdk/src/net/serve.ts",
-									"line": 155,
+									"line": 201,
 									"character": 9
 								}
 							],
 							"signatures": [
 								{
-									"id": 108,
+									"id": 44,
 									"name": "servePullZone",
 									"variant": "signature",
 									"kind": 4096,
@@ -987,25 +998,36 @@
 												"kind": "text",
 												"text": " option."
 											}
+										],
+										"blockTags": [
+											{
+												"tag": "@example",
+												"content": [
+													{
+														"kind": "code",
+														"text": "```ts\nimport BunnySDK from \"https://esm.sh/@bunny.net/edgescript-sdk@0.11.2\";\n\nconsole.log(\"Starting server...\");\n\nBunnySDK.net.http.servePullZone({ url: \"https://echo.free.beeceptor.com/\" })\n  .onOriginRequest(\n    (ctx) => {\n      const optFT = ctx.request.headers.get(\"feature-flags\");\n      const featureFlags = optFT\n        ? optFT.split(\",\").map((v) => v.trimStart())\n        : [];\n\n      // Route-based matching and feature flag check\n      const path = new URL(ctx.request.url).pathname;\n      if (path === \"/d\") {\n        if (!featureFlags.includes(\"route-d-preview\")) {\n          return Promise.resolve(\n            new Response(\"You cannot use this route.\", { status: 400 }),\n          );\n        }\n      }\n\n      return Promise.resolve(ctx.request);\n    },\n  ).onOriginResponse((ctx) => {\n    const response = ctx.response;\n    response.headers.append(\"Via\", \"Custom\");\n\n    return Promise.resolve(response);\n  });\n```"
+													}
+												]
+											}
 										]
 									},
 									"sources": [
 										{
 											"fileName": "libs/bunny-sdk/src/net/serve.ts",
-											"line": 146,
+											"line": 192,
 											"character": 9
 										}
 									],
 									"parameters": [
 										{
-											"id": 109,
+											"id": 45,
 											"name": "options",
 											"variant": "param",
 											"kind": 32768,
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"target": 67,
+												"target": 3,
 												"name": "PullZoneHandlerOptions",
 												"package": "@bunny.net/edgescript-sdk"
 											}
@@ -1013,13 +1035,13 @@
 									],
 									"type": {
 										"type": "reference",
-										"target": 77,
+										"target": 13,
 										"name": "PullZoneHandler",
 										"package": "@bunny.net/edgescript-sdk"
 									}
 								},
 								{
-									"id": 110,
+									"id": 46,
 									"name": "servePullZone",
 									"variant": "signature",
 									"kind": 4096,
@@ -1027,13 +1049,13 @@
 									"sources": [
 										{
 											"fileName": "libs/bunny-sdk/src/net/serve.ts",
-											"line": 147,
+											"line": 193,
 											"character": 9
 										}
 									],
 									"parameters": [
 										{
-											"id": 111,
+											"id": 47,
 											"name": "listener",
 											"variant": "param",
 											"kind": 32768,
@@ -1041,14 +1063,14 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 112,
+													"id": 48,
 													"name": "__type",
 													"variant": "declaration",
 													"kind": 65536,
 													"flags": {},
 													"children": [
 														{
-															"id": 114,
+															"id": 50,
 															"name": "hostname",
 															"variant": "declaration",
 															"kind": 1024,
@@ -1056,7 +1078,7 @@
 															"sources": [
 																{
 																	"fileName": "libs/bunny-sdk/src/net/serve.ts",
-																	"line": 148,
+																	"line": 194,
 																	"character": 28
 																}
 															],
@@ -1066,7 +1088,7 @@
 															}
 														},
 														{
-															"id": 113,
+															"id": 49,
 															"name": "port",
 															"variant": "declaration",
 															"kind": 1024,
@@ -1074,7 +1096,7 @@
 															"sources": [
 																{
 																	"fileName": "libs/bunny-sdk/src/net/serve.ts",
-																	"line": 148,
+																	"line": 194,
 																	"character": 14
 																}
 															],
@@ -1088,15 +1110,15 @@
 														{
 															"title": "Properties",
 															"children": [
-																114,
-																113
+																50,
+																49
 															]
 														}
 													],
 													"sources": [
 														{
 															"fileName": "libs/bunny-sdk/src/net/serve.ts",
-															"line": 148,
+															"line": 194,
 															"character": 12
 														}
 													]
@@ -1104,14 +1126,14 @@
 											}
 										},
 										{
-											"id": 115,
+											"id": 51,
 											"name": "options",
 											"variant": "param",
 											"kind": 32768,
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"target": 67,
+												"target": 3,
 												"name": "PullZoneHandlerOptions",
 												"package": "@bunny.net/edgescript-sdk"
 											}
@@ -1119,13 +1141,13 @@
 									],
 									"type": {
 										"type": "reference",
-										"target": 77,
+										"target": 13,
 										"name": "PullZoneHandler",
 										"package": "@bunny.net/edgescript-sdk"
 									}
 								},
 								{
-									"id": 116,
+									"id": 52,
 									"name": "servePullZone",
 									"variant": "signature",
 									"kind": 4096,
@@ -1133,33 +1155,33 @@
 									"sources": [
 										{
 											"fileName": "libs/bunny-sdk/src/net/serve.ts",
-											"line": 151,
+											"line": 197,
 											"character": 9
 										}
 									],
 									"parameters": [
 										{
-											"id": 117,
+											"id": 53,
 											"name": "listener",
 											"variant": "param",
 											"kind": 32768,
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"target": 62,
+												"target": 133,
 												"name": "TcpListener",
 												"package": "@bunny.net/edgescript-sdk"
 											}
 										},
 										{
-											"id": 118,
+											"id": 54,
 											"name": "options",
 											"variant": "param",
 											"kind": 32768,
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"target": 67,
+												"target": 3,
 												"name": "PullZoneHandlerOptions",
 												"package": "@bunny.net/edgescript-sdk"
 											}
@@ -1167,7 +1189,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"target": 77,
+										"target": 13,
 										"name": "PullZoneHandler",
 										"package": "@bunny.net/edgescript-sdk"
 									}
@@ -1179,19 +1201,19 @@
 						{
 							"title": "Type Aliases",
 							"children": [
-								70,
-								73,
-								77,
-								67,
-								105,
-								119
+								6,
+								9,
+								13,
+								3,
+								41,
+								55
 							]
 						},
 						{
 							"title": "Functions",
 							"children": [
-								93,
-								107
+								29,
+								43
 							]
 						}
 					],
@@ -1204,14 +1226,22 @@
 					]
 				},
 				{
-					"id": 123,
+					"id": 59,
 					"name": "ip",
 					"variant": "declaration",
 					"kind": 4,
 					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Networking Primitives for the IP Address."
+							}
+						]
+					},
 					"children": [
 						{
-							"id": 130,
+							"id": 66,
 							"name": "Enumerate",
 							"variant": "declaration",
 							"kind": 2097152,
@@ -1219,13 +1249,13 @@
 							"sources": [
 								{
 									"fileName": "libs/bunny-sdk/src/net/ip.ts",
-									"line": 1,
+									"line": 7,
 									"character": 12
 								}
 							],
 							"typeParameters": [
 								{
-									"id": 131,
+									"id": 67,
 									"name": "N",
 									"variant": "typeParam",
 									"kind": 131072,
@@ -1236,7 +1266,7 @@
 									}
 								},
 								{
-									"id": 132,
+									"id": 68,
 									"name": "Acc",
 									"variant": "typeParam",
 									"kind": 131072,
@@ -1263,7 +1293,7 @@
 									},
 									"objectType": {
 										"type": "reference",
-										"target": 132,
+										"target": 68,
 										"name": "Acc",
 										"package": "@bunny.net/edgescript-sdk",
 										"refersToTypeParameter": true
@@ -1271,7 +1301,7 @@
 								},
 								"extendsType": {
 									"type": "reference",
-									"target": 131,
+									"target": 67,
 									"name": "N",
 									"package": "@bunny.net/edgescript-sdk",
 									"refersToTypeParameter": true
@@ -1284,7 +1314,7 @@
 									},
 									"objectType": {
 										"type": "reference",
-										"target": 132,
+										"target": 68,
 										"name": "Acc",
 										"package": "@bunny.net/edgescript-sdk",
 										"refersToTypeParameter": true
@@ -1292,11 +1322,11 @@
 								},
 								"falseType": {
 									"type": "reference",
-									"target": 130,
+									"target": 66,
 									"typeArguments": [
 										{
 											"type": "reference",
-											"target": 131,
+											"target": 67,
 											"name": "N",
 											"package": "@bunny.net/edgescript-sdk",
 											"refersToTypeParameter": true
@@ -1308,7 +1338,7 @@
 													"type": "rest",
 													"elementType": {
 														"type": "reference",
-														"target": 132,
+														"target": 68,
 														"name": "Acc",
 														"package": "@bunny.net/edgescript-sdk",
 														"refersToTypeParameter": true
@@ -1322,7 +1352,7 @@
 													},
 													"objectType": {
 														"type": "reference",
-														"target": 132,
+														"target": 68,
 														"name": "Acc",
 														"package": "@bunny.net/edgescript-sdk",
 														"refersToTypeParameter": true
@@ -1337,15 +1367,23 @@
 							}
 						},
 						{
-							"id": 136,
+							"id": 72,
 							"name": "IPv4",
 							"variant": "declaration",
 							"kind": 2097152,
 							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "An IPv4 Address"
+									}
+								]
+							},
 							"sources": [
 								{
 									"fileName": "libs/bunny-sdk/src/net/ip.ts",
-									"line": 7,
+									"line": 18,
 									"character": 12
 								}
 							],
@@ -1354,7 +1392,7 @@
 								"elements": [
 									{
 										"type": "reference",
-										"target": 133,
+										"target": 69,
 										"typeArguments": [
 											{
 												"type": "literal",
@@ -1370,7 +1408,7 @@
 									},
 									{
 										"type": "reference",
-										"target": 133,
+										"target": 69,
 										"typeArguments": [
 											{
 												"type": "literal",
@@ -1386,7 +1424,7 @@
 									},
 									{
 										"type": "reference",
-										"target": 133,
+										"target": 69,
 										"typeArguments": [
 											{
 												"type": "literal",
@@ -1402,7 +1440,7 @@
 									},
 									{
 										"type": "reference",
-										"target": 133,
+										"target": 69,
 										"typeArguments": [
 											{
 												"type": "literal",
@@ -1420,7 +1458,7 @@
 							}
 						},
 						{
-							"id": 133,
+							"id": 69,
 							"name": "Range",
 							"variant": "declaration",
 							"kind": 2097152,
@@ -1428,13 +1466,13 @@
 							"sources": [
 								{
 									"fileName": "libs/bunny-sdk/src/net/ip.ts",
-									"line": 5,
+									"line": 11,
 									"character": 12
 								}
 							],
 							"typeParameters": [
 								{
-									"id": 134,
+									"id": 70,
 									"name": "F",
 									"variant": "typeParam",
 									"kind": 131072,
@@ -1445,7 +1483,7 @@
 									}
 								},
 								{
-									"id": 135,
+									"id": 71,
 									"name": "T",
 									"variant": "typeParam",
 									"kind": 131072,
@@ -1468,11 +1506,11 @@
 										"typeArguments": [
 											{
 												"type": "reference",
-												"target": 130,
+												"target": 66,
 												"typeArguments": [
 													{
 														"type": "reference",
-														"target": 135,
+														"target": 71,
 														"name": "T",
 														"package": "@bunny.net/edgescript-sdk",
 														"refersToTypeParameter": true
@@ -1483,11 +1521,11 @@
 											},
 											{
 												"type": "reference",
-												"target": 130,
+												"target": 66,
 												"typeArguments": [
 													{
 														"type": "reference",
-														"target": 134,
+														"target": 70,
 														"name": "F",
 														"package": "@bunny.net/edgescript-sdk",
 														"refersToTypeParameter": true
@@ -1502,7 +1540,7 @@
 									},
 									{
 										"type": "reference",
-										"target": 135,
+										"target": 71,
 										"name": "T",
 										"package": "@bunny.net/edgescript-sdk",
 										"refersToTypeParameter": true
@@ -1511,7 +1549,7 @@
 							}
 						},
 						{
-							"id": 124,
+							"id": 60,
 							"name": "toString",
 							"variant": "declaration",
 							"kind": 64,
@@ -1519,13 +1557,13 @@
 							"sources": [
 								{
 									"fileName": "libs/bunny-sdk/src/net/ip.ts",
-									"line": 9,
+									"line": 20,
 									"character": 16
 								}
 							],
 							"signatures": [
 								{
-									"id": 125,
+									"id": 61,
 									"name": "toString",
 									"variant": "signature",
 									"kind": 4096,
@@ -1533,20 +1571,20 @@
 									"sources": [
 										{
 											"fileName": "libs/bunny-sdk/src/net/ip.ts",
-											"line": 9,
+											"line": 20,
 											"character": 16
 										}
 									],
 									"parameters": [
 										{
-											"id": 126,
+											"id": 62,
 											"name": "ip",
 											"variant": "param",
 											"kind": 32768,
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"target": 136,
+												"target": 72,
 												"name": "IPv4",
 												"package": "@bunny.net/edgescript-sdk"
 											}
@@ -1560,7 +1598,7 @@
 							]
 						},
 						{
-							"id": 127,
+							"id": 63,
 							"name": "tryParseFromString",
 							"variant": "declaration",
 							"kind": 64,
@@ -1568,13 +1606,13 @@
 							"sources": [
 								{
 									"fileName": "libs/bunny-sdk/src/net/ip.ts",
-									"line": 16,
+									"line": 27,
 									"character": 16
 								}
 							],
 							"signatures": [
 								{
-									"id": 128,
+									"id": 64,
 									"name": "tryParseFromString",
 									"variant": "signature",
 									"kind": 4096,
@@ -1590,13 +1628,13 @@
 									"sources": [
 										{
 											"fileName": "libs/bunny-sdk/src/net/ip.ts",
-											"line": 16,
+											"line": 27,
 											"character": 16
 										}
 									],
 									"parameters": [
 										{
-											"id": 129,
+											"id": 65,
 											"name": "ip",
 											"variant": "param",
 											"kind": 32768,
@@ -1612,7 +1650,7 @@
 										"types": [
 											{
 												"type": "reference",
-												"target": 136,
+												"target": 72,
 												"name": "IPv4",
 												"package": "@bunny.net/edgescript-sdk"
 											},
@@ -1635,16 +1673,16 @@
 						{
 							"title": "Type Aliases",
 							"children": [
-								130,
-								136,
-								133
+								66,
+								72,
+								69
 							]
 						},
 						{
 							"title": "Functions",
 							"children": [
-								124,
-								127
+								60,
+								63
 							]
 						}
 					],
@@ -1657,21 +1695,21 @@
 					]
 				},
 				{
-					"id": 2,
+					"id": 73,
 					"name": "socketAddr",
 					"variant": "declaration",
 					"kind": 4,
 					"flags": {},
 					"children": [
 						{
-							"id": 6,
+							"id": 77,
 							"name": "v4",
 							"variant": "declaration",
 							"kind": 4,
 							"flags": {},
 							"children": [
 								{
-									"id": 16,
+									"id": 87,
 									"name": "SocketAddrV4",
 									"variant": "declaration",
 									"kind": 2097152,
@@ -1686,14 +1724,14 @@
 									"type": {
 										"type": "reflection",
 										"declaration": {
-											"id": 17,
+											"id": 88,
 											"name": "__type",
 											"variant": "declaration",
 											"kind": 65536,
 											"flags": {},
 											"children": [
 												{
-													"id": 18,
+													"id": 89,
 													"name": "_tag",
 													"variant": "declaration",
 													"kind": 1024,
@@ -1713,7 +1751,7 @@
 													}
 												},
 												{
-													"id": 20,
+													"id": 91,
 													"name": "ip",
 													"variant": "declaration",
 													"kind": 1024,
@@ -1727,14 +1765,14 @@
 													],
 													"type": {
 														"type": "reference",
-														"target": 136,
+														"target": 72,
 														"name": "IP.IPv4",
 														"package": "@bunny.net/edgescript-sdk",
 														"qualifiedName": "IPv4"
 													}
 												},
 												{
-													"id": 19,
+													"id": 90,
 													"name": "port",
 													"variant": "declaration",
 													"kind": 1024,
@@ -1756,9 +1794,9 @@
 												{
 													"title": "Properties",
 													"children": [
-														18,
-														20,
-														19
+														89,
+														91,
+														90
 													]
 												}
 											],
@@ -1773,7 +1811,7 @@
 									}
 								},
 								{
-									"id": 10,
+									"id": 81,
 									"name": "ip",
 									"variant": "declaration",
 									"kind": 64,
@@ -1787,7 +1825,7 @@
 									],
 									"signatures": [
 										{
-											"id": 11,
+											"id": 82,
 											"name": "ip",
 											"variant": "signature",
 											"kind": 4096,
@@ -1809,14 +1847,14 @@
 											],
 											"parameters": [
 												{
-													"id": 12,
+													"id": 83,
 													"name": "addr",
 													"variant": "param",
 													"kind": 32768,
 													"flags": {},
 													"type": {
 														"type": "reference",
-														"target": 16,
+														"target": 87,
 														"name": "SocketAddrV4",
 														"package": "@bunny.net/edgescript-sdk"
 													}
@@ -1824,7 +1862,7 @@
 											],
 											"type": {
 												"type": "reference",
-												"target": 136,
+												"target": 72,
 												"name": "IP.IPv4",
 												"package": "@bunny.net/edgescript-sdk",
 												"qualifiedName": "IPv4"
@@ -1833,7 +1871,7 @@
 									]
 								},
 								{
-									"id": 7,
+									"id": 78,
 									"name": "port",
 									"variant": "declaration",
 									"kind": 64,
@@ -1847,7 +1885,7 @@
 									],
 									"signatures": [
 										{
-											"id": 8,
+											"id": 79,
 											"name": "port",
 											"variant": "signature",
 											"kind": 4096,
@@ -1869,14 +1907,14 @@
 											],
 											"parameters": [
 												{
-													"id": 9,
+													"id": 80,
 													"name": "addr",
 													"variant": "param",
 													"kind": 32768,
 													"flags": {},
 													"type": {
 														"type": "reference",
-														"target": 16,
+														"target": 87,
 														"name": "SocketAddrV4",
 														"package": "@bunny.net/edgescript-sdk"
 													}
@@ -1890,7 +1928,7 @@
 									]
 								},
 								{
-									"id": 13,
+									"id": 84,
 									"name": "tryFromString",
 									"variant": "declaration",
 									"kind": 64,
@@ -1904,7 +1942,7 @@
 									],
 									"signatures": [
 										{
-											"id": 14,
+											"id": 85,
 											"name": "tryFromString",
 											"variant": "signature",
 											"kind": 4096,
@@ -1926,7 +1964,7 @@
 											],
 											"parameters": [
 												{
-													"id": 15,
+													"id": 86,
 													"name": "value",
 													"variant": "param",
 													"kind": 32768,
@@ -1942,7 +1980,7 @@
 												"types": [
 													{
 														"type": "reference",
-														"target": 16,
+														"target": 87,
 														"name": "SocketAddrV4",
 														"package": "@bunny.net/edgescript-sdk"
 													},
@@ -1965,15 +2003,15 @@
 								{
 									"title": "Type Aliases",
 									"children": [
-										16
+										87
 									]
 								},
 								{
 									"title": "Functions",
 									"children": [
-										10,
-										7,
-										13
+										81,
+										78,
+										84
 									]
 								}
 							],
@@ -1986,14 +2024,14 @@
 							]
 						},
 						{
-							"id": 26,
+							"id": 97,
 							"name": "InvalidAddr",
 							"variant": "declaration",
 							"kind": 128,
 							"flags": {},
 							"children": [
 								{
-									"id": 37,
+									"id": 108,
 									"name": "constructor",
 									"variant": "declaration",
 									"kind": 512,
@@ -2001,13 +2039,13 @@
 									"sources": [
 										{
 											"fileName": "libs/bunny-sdk/src/net/socket_addr.ts",
-											"line": 24,
+											"line": 30,
 											"character": 2
 										}
 									],
 									"signatures": [
 										{
-											"id": 38,
+											"id": 109,
 											"name": "new InvalidAddr",
 											"variant": "signature",
 											"kind": 16384,
@@ -2015,13 +2053,13 @@
 											"sources": [
 												{
 													"fileName": "libs/bunny-sdk/src/net/socket_addr.ts",
-													"line": 24,
+													"line": 30,
 													"character": 2
 												}
 											],
 											"parameters": [
 												{
-													"id": 39,
+													"id": 110,
 													"name": "message",
 													"variant": "param",
 													"kind": 32768,
@@ -2034,7 +2072,7 @@
 											],
 											"type": {
 												"type": "reference",
-												"target": 26,
+												"target": 97,
 												"name": "InvalidAddr",
 												"package": "@bunny.net/edgescript-sdk"
 											},
@@ -2052,7 +2090,7 @@
 									}
 								},
 								{
-									"id": 40,
+									"id": 111,
 									"name": "_guard",
 									"variant": "declaration",
 									"kind": 1024,
@@ -2060,7 +2098,7 @@
 									"sources": [
 										{
 											"fileName": "libs/bunny-sdk/src/net/socket_addr.ts",
-											"line": 22,
+											"line": 28,
 											"character": 2
 										}
 									],
@@ -2071,7 +2109,7 @@
 									"defaultValue": "addr_symbol"
 								},
 								{
-									"id": 46,
+									"id": 117,
 									"name": "cause",
 									"variant": "declaration",
 									"kind": 1024,
@@ -2098,7 +2136,7 @@
 									}
 								},
 								{
-									"id": 44,
+									"id": 115,
 									"name": "message",
 									"variant": "declaration",
 									"kind": 1024,
@@ -2124,7 +2162,7 @@
 									}
 								},
 								{
-									"id": 43,
+									"id": 114,
 									"name": "name",
 									"variant": "declaration",
 									"kind": 1024,
@@ -2150,7 +2188,7 @@
 									}
 								},
 								{
-									"id": 45,
+									"id": 116,
 									"name": "stack",
 									"variant": "declaration",
 									"kind": 1024,
@@ -2177,7 +2215,7 @@
 									}
 								},
 								{
-									"id": 31,
+									"id": 102,
 									"name": "prepareStackTrace",
 									"variant": "declaration",
 									"kind": 1024,
@@ -2216,7 +2254,7 @@
 									"type": {
 										"type": "reflection",
 										"declaration": {
-											"id": 32,
+											"id": 103,
 											"name": "__type",
 											"variant": "declaration",
 											"kind": 65536,
@@ -2232,7 +2270,7 @@
 											],
 											"signatures": [
 												{
-													"id": 33,
+													"id": 104,
 													"name": "__type",
 													"variant": "signature",
 													"kind": 4096,
@@ -2248,7 +2286,7 @@
 													],
 													"parameters": [
 														{
-															"id": 34,
+															"id": 105,
 															"name": "err",
 															"variant": "param",
 															"kind": 32768,
@@ -2266,7 +2304,7 @@
 															}
 														},
 														{
-															"id": 35,
+															"id": 106,
 															"name": "stackTraces",
 															"variant": "param",
 															"kind": 32768,
@@ -2303,7 +2341,7 @@
 									}
 								},
 								{
-									"id": 36,
+									"id": 107,
 									"name": "stackTraceLimit",
 									"variant": "declaration",
 									"kind": 1024,
@@ -2330,7 +2368,7 @@
 									}
 								},
 								{
-									"id": 41,
+									"id": 112,
 									"name": "toString",
 									"variant": "declaration",
 									"kind": 2048,
@@ -2338,13 +2376,13 @@
 									"sources": [
 										{
 											"fileName": "libs/bunny-sdk/src/net/socket_addr.ts",
-											"line": 29,
+											"line": 35,
 											"character": 11
 										}
 									],
 									"signatures": [
 										{
-											"id": 42,
+											"id": 113,
 											"name": "toString",
 											"variant": "signature",
 											"kind": 4096,
@@ -2360,7 +2398,7 @@
 											"sources": [
 												{
 													"fileName": "libs/bunny-sdk/src/net/socket_addr.ts",
-													"line": 29,
+													"line": 35,
 													"character": 11
 												}
 											],
@@ -2372,7 +2410,7 @@
 									]
 								},
 								{
-									"id": 27,
+									"id": 98,
 									"name": "captureStackTrace",
 									"variant": "declaration",
 									"kind": 2048,
@@ -2390,7 +2428,7 @@
 									],
 									"signatures": [
 										{
-											"id": 28,
+											"id": 99,
 											"name": "captureStackTrace",
 											"variant": "signature",
 											"kind": 4096,
@@ -2415,7 +2453,7 @@
 											],
 											"parameters": [
 												{
-													"id": 29,
+													"id": 100,
 													"name": "targetObject",
 													"variant": "param",
 													"kind": 32768,
@@ -2428,7 +2466,7 @@
 													}
 												},
 												{
-													"id": 30,
+													"id": 101,
 													"name": "constructorOpt",
 													"variant": "param",
 													"kind": 32768,
@@ -2469,33 +2507,33 @@
 								{
 									"title": "Constructors",
 									"children": [
-										37
+										108
 									]
 								},
 								{
 									"title": "Properties",
 									"children": [
-										40,
-										46,
-										44,
-										43,
-										45,
-										31,
-										36
+										111,
+										117,
+										115,
+										114,
+										116,
+										102,
+										107
 									]
 								},
 								{
 									"title": "Methods",
 									"children": [
-										41,
-										27
+										112,
+										98
 									]
 								}
 							],
 							"sources": [
 								{
 									"fileName": "libs/bunny-sdk/src/net/socket_addr.ts",
-									"line": 21,
+									"line": 27,
 									"character": 13
 								}
 							],
@@ -2512,7 +2550,7 @@
 							]
 						},
 						{
-							"id": 21,
+							"id": 92,
 							"name": "NoAddr",
 							"variant": "declaration",
 							"kind": 2097152,
@@ -2527,14 +2565,14 @@
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 22,
+									"id": 93,
 									"name": "__type",
 									"variant": "declaration",
 									"kind": 65536,
 									"flags": {},
 									"children": [
 										{
-											"id": 23,
+											"id": 94,
 											"name": "_tag",
 											"variant": "declaration",
 											"kind": 1024,
@@ -2558,7 +2596,7 @@
 										{
 											"title": "Properties",
 											"children": [
-												23
+												94
 											]
 										}
 									],
@@ -2573,15 +2611,23 @@
 							}
 						},
 						{
-							"id": 24,
+							"id": 95,
 							"name": "SocketAddr",
 							"variant": "declaration",
 							"kind": 2097152,
 							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "An internet socket address\n\nWe have a special case where it's not a socket address but a socket provided\nby Bunny. This type will be refined with the associated method to fix it."
+									}
+								]
+							},
 							"sources": [
 								{
 									"fileName": "libs/bunny-sdk/src/net/socket_addr.ts",
-									"line": 9,
+									"line": 15,
 									"character": 12
 								}
 							],
@@ -2590,14 +2636,14 @@
 								"types": [
 									{
 										"type": "reference",
-										"target": 16,
+										"target": 87,
 										"name": "v4.SocketAddrV4",
 										"package": "@bunny.net/edgescript-sdk",
 										"qualifiedName": "SocketAddrV4"
 									},
 									{
 										"type": "reference",
-										"target": 21,
+										"target": 92,
 										"name": "NoAddr",
 										"package": "@bunny.net/edgescript-sdk"
 									}
@@ -2605,7 +2651,7 @@
 							}
 						},
 						{
-							"id": 25,
+							"id": 96,
 							"name": "SocketAddrError",
 							"variant": "declaration",
 							"kind": 2097152,
@@ -2613,19 +2659,19 @@
 							"sources": [
 								{
 									"fileName": "libs/bunny-sdk/src/net/socket_addr.ts",
-									"line": 18,
+									"line": 24,
 									"character": 12
 								}
 							],
 							"type": {
 								"type": "reference",
-								"target": 26,
+								"target": 97,
 								"name": "InvalidAddr",
 								"package": "@bunny.net/edgescript-sdk"
 							}
 						},
 						{
-							"id": 3,
+							"id": 74,
 							"name": "isV4",
 							"variant": "declaration",
 							"kind": 64,
@@ -2633,13 +2679,13 @@
 							"sources": [
 								{
 									"fileName": "libs/bunny-sdk/src/net/socket_addr.ts",
-									"line": 14,
+									"line": 20,
 									"character": 16
 								}
 							],
 							"signatures": [
 								{
-									"id": 4,
+									"id": 75,
 									"name": "isV4",
 									"variant": "signature",
 									"kind": 4096,
@@ -2655,20 +2701,20 @@
 									"sources": [
 										{
 											"fileName": "libs/bunny-sdk/src/net/socket_addr.ts",
-											"line": 14,
+											"line": 20,
 											"character": 16
 										}
 									],
 									"parameters": [
 										{
-											"id": 5,
+											"id": 76,
 											"name": "value",
 											"variant": "param",
 											"kind": 32768,
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"target": 24,
+												"target": 95,
 												"name": "SocketAddr",
 												"package": "@bunny.net/edgescript-sdk"
 											}
@@ -2680,7 +2726,7 @@
 										"asserts": false,
 										"targetType": {
 											"type": "reference",
-											"target": 16,
+											"target": 87,
 											"name": "SocketAddrV4",
 											"package": "@bunny.net/edgescript-sdk"
 										}
@@ -2693,27 +2739,27 @@
 						{
 							"title": "Namespaces",
 							"children": [
-								6
+								77
 							]
 						},
 						{
 							"title": "Classes",
 							"children": [
-								26
+								97
 							]
 						},
 						{
 							"title": "Type Aliases",
 							"children": [
-								21,
-								24,
-								25
+								92,
+								95,
+								96
 							]
 						},
 						{
 							"title": "Functions",
 							"children": [
-								3
+								74
 							]
 						}
 					],
@@ -2726,14 +2772,14 @@
 					]
 				},
 				{
-					"id": 47,
+					"id": 118,
 					"name": "tcp",
 					"variant": "declaration",
 					"kind": 4,
 					"flags": {},
 					"children": [
 						{
-							"id": 62,
+							"id": 133,
 							"name": "TcpListener",
 							"variant": "declaration",
 							"kind": 2097152,
@@ -2748,14 +2794,14 @@
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 63,
+									"id": 134,
 									"name": "__type",
 									"variant": "declaration",
 									"kind": 65536,
 									"flags": {},
 									"children": [
 										{
-											"id": 64,
+											"id": 135,
 											"name": "_tag",
 											"variant": "declaration",
 											"kind": 1024,
@@ -2786,7 +2832,7 @@
 											}
 										},
 										{
-											"id": 65,
+											"id": 136,
 											"name": "addr",
 											"variant": "declaration",
 											"kind": 1024,
@@ -2800,7 +2846,7 @@
 											],
 											"type": {
 												"type": "reference",
-												"target": 24,
+												"target": 95,
 												"name": "SocketAddr.SocketAddr",
 												"package": "@bunny.net/edgescript-sdk",
 												"qualifiedName": "SocketAddr"
@@ -2811,8 +2857,8 @@
 										{
 											"title": "Properties",
 											"children": [
-												64,
-												65
+												135,
+												136
 											]
 										}
 									],
@@ -2827,7 +2873,7 @@
 							}
 						},
 						{
-							"id": 59,
+							"id": 130,
 							"name": "bind",
 							"variant": "declaration",
 							"kind": 64,
@@ -2841,7 +2887,7 @@
 							],
 							"signatures": [
 								{
-									"id": 60,
+									"id": 131,
 									"name": "bind",
 									"variant": "signature",
 									"kind": 4096,
@@ -2863,14 +2909,14 @@
 									],
 									"parameters": [
 										{
-											"id": 61,
+											"id": 132,
 											"name": "addr",
 											"variant": "param",
 											"kind": 32768,
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"target": 16,
+												"target": 87,
 												"name": "SocketAddrV4",
 												"package": "@bunny.net/edgescript-sdk"
 											}
@@ -2878,7 +2924,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"target": 62,
+										"target": 133,
 										"name": "TcpListener",
 										"package": "@bunny.net/edgescript-sdk"
 									}
@@ -2886,7 +2932,7 @@
 							]
 						},
 						{
-							"id": 48,
+							"id": 119,
 							"name": "isTcpListener",
 							"variant": "declaration",
 							"kind": 64,
@@ -2900,7 +2946,7 @@
 							],
 							"signatures": [
 								{
-									"id": 49,
+									"id": 120,
 									"name": "isTcpListener",
 									"variant": "signature",
 									"kind": 4096,
@@ -2914,7 +2960,7 @@
 									],
 									"parameters": [
 										{
-											"id": 50,
+											"id": 121,
 											"name": "value",
 											"variant": "param",
 											"kind": 32768,
@@ -2931,7 +2977,7 @@
 										"asserts": false,
 										"targetType": {
 											"type": "reference",
-											"target": 62,
+											"target": 133,
 											"name": "TcpListener",
 											"package": "@bunny.net/edgescript-sdk"
 										}
@@ -2940,7 +2986,7 @@
 							]
 						},
 						{
-							"id": 54,
+							"id": 125,
 							"name": "toString",
 							"variant": "declaration",
 							"kind": 64,
@@ -2954,7 +3000,7 @@
 							],
 							"signatures": [
 								{
-									"id": 55,
+									"id": 126,
 									"name": "toString",
 									"variant": "signature",
 									"kind": 4096,
@@ -2976,14 +3022,14 @@
 									],
 									"parameters": [
 										{
-											"id": 56,
+											"id": 127,
 											"name": "tcp",
 											"variant": "param",
 											"kind": 32768,
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"target": 62,
+												"target": 133,
 												"name": "TcpListener",
 												"package": "@bunny.net/edgescript-sdk"
 											}
@@ -2997,7 +3043,7 @@
 							]
 						},
 						{
-							"id": 51,
+							"id": 122,
 							"name": "unstable_local_addr",
 							"variant": "declaration",
 							"kind": 64,
@@ -3011,7 +3057,7 @@
 							],
 							"signatures": [
 								{
-									"id": 52,
+									"id": 123,
 									"name": "unstable_local_addr",
 									"variant": "signature",
 									"kind": 4096,
@@ -3033,14 +3079,14 @@
 									],
 									"parameters": [
 										{
-											"id": 53,
+											"id": 124,
 											"name": "tcp",
 											"variant": "param",
 											"kind": 32768,
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"target": 62,
+												"target": 133,
 												"name": "TcpListener",
 												"package": "@bunny.net/edgescript-sdk"
 											}
@@ -3048,7 +3094,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"target": 24,
+										"target": 95,
 										"name": "SocketAddr.SocketAddr",
 										"package": "@bunny.net/edgescript-sdk",
 										"qualifiedName": "SocketAddr"
@@ -3057,7 +3103,7 @@
 							]
 						},
 						{
-							"id": 57,
+							"id": 128,
 							"name": "unstable_new",
 							"variant": "declaration",
 							"kind": 64,
@@ -3071,7 +3117,7 @@
 							],
 							"signatures": [
 								{
-									"id": 58,
+									"id": 129,
 									"name": "unstable_new",
 									"variant": "signature",
 									"kind": 4096,
@@ -3093,7 +3139,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"target": 62,
+										"target": 133,
 										"name": "TcpListener",
 										"package": "@bunny.net/edgescript-sdk"
 									}
@@ -3105,17 +3151,17 @@
 						{
 							"title": "Type Aliases",
 							"children": [
-								62
+								133
 							]
 						},
 						{
 							"title": "Functions",
 							"children": [
-								59,
-								48,
-								54,
-								51,
-								57
+								130,
+								119,
+								125,
+								122,
+								128
 							]
 						}
 					],
@@ -3132,10 +3178,10 @@
 				{
 					"title": "Namespaces",
 					"children": [
-						66,
-						123,
 						2,
-						47
+						59,
+						73,
+						118
 					]
 				}
 			],
@@ -3165,6 +3211,38 @@
 		{
 			"kind": "code",
 			"text": "`@bunny.net/edge-script-sdk`"
+		},
+		{
+			"kind": "text",
+			"text": " library gives you functions and tools you can\nleverage to build scripts and middleware. Those functions are optimized to be\nable to run in our Bunny.net Network, but you can also use them to build your\nscripts and run it locally with "
+		},
+		{
+			"kind": "code",
+			"text": "`Node`"
+		},
+		{
+			"kind": "text",
+			"text": " or "
+		},
+		{
+			"kind": "code",
+			"text": "`Deno`"
+		},
+		{
+			"kind": "text",
+			"text": ".\n\n## Usage\n\nWith "
+		},
+		{
+			"kind": "code",
+			"text": "`@bunny.net/edgescript-sdk`"
+		},
+		{
+			"kind": "text",
+			"text": " you can write a script which will work with\nDeno, with Node, and within our network. Here is an example with a dynamic http\nimport you can use with Deno.\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```typescript\nimport * as BunnySDK from \"https://esm.sh/@bunny.net/edgescript-sdk@0.11\";\n\nconsole.log(\"Starting server...\");\nBunnySDK.net.http.serve(async (req) => {\n  console.log(`[INFO]: ${req.method} - ${req.url}`);\n  return new Response(\"Hello bunny!\");\n});\n```"
 		}
 	],
 	"symbolIdMap": {
@@ -3177,564 +3255,564 @@
 			"qualifiedName": ""
 		},
 		"2": {
-			"sourceFileName": "src/net/socket_addr.ts",
+			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": ""
 		},
 		"3": {
-			"sourceFileName": "src/net/socket_addr.ts",
-			"qualifiedName": "isV4"
-		},
-		"4": {
-			"sourceFileName": "src/net/socket_addr.ts",
-			"qualifiedName": "isV4"
-		},
-		"5": {
-			"sourceFileName": "src/net/socket_addr.ts",
-			"qualifiedName": "value"
-		},
-		"6": {
-			"sourceFileName": "src/net/socket/v4.ts",
-			"qualifiedName": ""
-		},
-		"7": {
-			"sourceFileName": "src/net/socket/v4.ts",
-			"qualifiedName": "port"
-		},
-		"8": {
-			"sourceFileName": "src/net/socket/v4.ts",
-			"qualifiedName": "port"
-		},
-		"9": {
-			"sourceFileName": "src/net/socket/v4.ts",
-			"qualifiedName": "addr"
-		},
-		"10": {
-			"sourceFileName": "src/net/socket/v4.ts",
-			"qualifiedName": "ip"
-		},
-		"11": {
-			"sourceFileName": "src/net/socket/v4.ts",
-			"qualifiedName": "ip"
-		},
-		"12": {
-			"sourceFileName": "src/net/socket/v4.ts",
-			"qualifiedName": "addr"
-		},
-		"13": {
-			"sourceFileName": "src/net/socket/v4.ts",
-			"qualifiedName": "tryFromString"
-		},
-		"14": {
-			"sourceFileName": "src/net/socket/v4.ts",
-			"qualifiedName": "tryFromString"
-		},
-		"15": {
-			"sourceFileName": "src/net/socket/v4.ts",
-			"qualifiedName": "value"
-		},
-		"16": {
-			"sourceFileName": "src/net/socket/v4.ts",
-			"qualifiedName": "SocketAddrV4"
-		},
-		"17": {
-			"sourceFileName": "src/net/socket/v4.ts",
-			"qualifiedName": "__type"
-		},
-		"18": {
-			"sourceFileName": "src/net/socket/v4.ts",
-			"qualifiedName": "__type._tag"
-		},
-		"19": {
-			"sourceFileName": "src/net/socket/v4.ts",
-			"qualifiedName": "__type.port"
-		},
-		"20": {
-			"sourceFileName": "src/net/socket/v4.ts",
-			"qualifiedName": "__type.ip"
-		},
-		"21": {
-			"sourceFileName": "src/net/socket_addr.ts",
-			"qualifiedName": "NoAddr"
-		},
-		"22": {
-			"sourceFileName": "src/net/socket_addr.ts",
-			"qualifiedName": "__type"
-		},
-		"23": {
-			"sourceFileName": "src/net/socket_addr.ts",
-			"qualifiedName": "__type._tag"
-		},
-		"24": {
-			"sourceFileName": "src/net/socket_addr.ts",
-			"qualifiedName": "SocketAddr"
-		},
-		"25": {
-			"sourceFileName": "src/net/socket_addr.ts",
-			"qualifiedName": "SocketAddrError"
-		},
-		"26": {
-			"sourceFileName": "src/net/socket_addr.ts",
-			"qualifiedName": "InvalidAddr"
-		},
-		"27": {
-			"sourceFileName": "../../node_modules/.pnpm/@types+node@20.14.15/node_modules/@types/node/globals.d.ts",
-			"qualifiedName": "__global.ErrorConstructor.captureStackTrace"
-		},
-		"28": {
-			"sourceFileName": "../../node_modules/.pnpm/@types+node@20.14.15/node_modules/@types/node/globals.d.ts",
-			"qualifiedName": "__global.ErrorConstructor.captureStackTrace"
-		},
-		"29": {
-			"sourceFileName": "../../node_modules/.pnpm/@types+node@20.14.15/node_modules/@types/node/globals.d.ts",
-			"qualifiedName": "targetObject"
-		},
-		"30": {
-			"sourceFileName": "../../node_modules/.pnpm/@types+node@20.14.15/node_modules/@types/node/globals.d.ts",
-			"qualifiedName": "constructorOpt"
-		},
-		"31": {
-			"sourceFileName": "../../node_modules/.pnpm/@types+node@20.14.15/node_modules/@types/node/globals.d.ts",
-			"qualifiedName": "__global.ErrorConstructor.prepareStackTrace"
-		},
-		"32": {
-			"sourceFileName": "../../node_modules/.pnpm/@types+node@20.14.15/node_modules/@types/node/globals.d.ts",
-			"qualifiedName": "__type"
-		},
-		"33": {
-			"sourceFileName": "../../node_modules/.pnpm/@types+node@20.14.15/node_modules/@types/node/globals.d.ts",
-			"qualifiedName": "__type"
-		},
-		"34": {
-			"sourceFileName": "../../node_modules/.pnpm/@types+node@20.14.15/node_modules/@types/node/globals.d.ts",
-			"qualifiedName": "err"
-		},
-		"35": {
-			"sourceFileName": "../../node_modules/.pnpm/@types+node@20.14.15/node_modules/@types/node/globals.d.ts",
-			"qualifiedName": "stackTraces"
-		},
-		"36": {
-			"sourceFileName": "../../node_modules/.pnpm/@types+node@20.14.15/node_modules/@types/node/globals.d.ts",
-			"qualifiedName": "__global.ErrorConstructor.stackTraceLimit"
-		},
-		"37": {
-			"sourceFileName": "src/net/socket_addr.ts",
-			"qualifiedName": "InvalidAddr.__constructor"
-		},
-		"38": {
-			"sourceFileName": "src/net/socket_addr.ts",
-			"qualifiedName": "InvalidAddr"
-		},
-		"39": {
-			"sourceFileName": "src/net/socket_addr.ts",
-			"qualifiedName": "message"
-		},
-		"40": {
-			"sourceFileName": "src/net/socket_addr.ts",
-			"qualifiedName": "InvalidAddr._guard"
-		},
-		"41": {
-			"sourceFileName": "src/net/socket_addr.ts",
-			"qualifiedName": "InvalidAddr.toString"
-		},
-		"42": {
-			"sourceFileName": "src/net/socket_addr.ts",
-			"qualifiedName": "InvalidAddr.toString"
-		},
-		"43": {
-			"sourceFileName": "../../node_modules/.pnpm/typescript@5.5.4/node_modules/typescript/lib/lib.es5.d.ts",
-			"qualifiedName": "Error.name"
-		},
-		"44": {
-			"sourceFileName": "../../node_modules/.pnpm/typescript@5.5.4/node_modules/typescript/lib/lib.es5.d.ts",
-			"qualifiedName": "Error.message"
-		},
-		"45": {
-			"sourceFileName": "../../node_modules/.pnpm/typescript@5.5.4/node_modules/typescript/lib/lib.es5.d.ts",
-			"qualifiedName": "Error.stack"
-		},
-		"46": {
-			"sourceFileName": "../../node_modules/.pnpm/typescript@5.5.4/node_modules/typescript/lib/lib.es2022.error.d.ts",
-			"qualifiedName": "Error.cause"
-		},
-		"47": {
-			"sourceFileName": "src/net/tcp.ts",
-			"qualifiedName": ""
-		},
-		"48": {
-			"sourceFileName": "src/net/tcp.ts",
-			"qualifiedName": "isTcpListener"
-		},
-		"49": {
-			"sourceFileName": "src/net/tcp.ts",
-			"qualifiedName": "isTcpListener"
-		},
-		"50": {
-			"sourceFileName": "src/net/tcp.ts",
-			"qualifiedName": "value"
-		},
-		"51": {
-			"sourceFileName": "src/net/tcp.ts",
-			"qualifiedName": "unstable_local_addr"
-		},
-		"52": {
-			"sourceFileName": "src/net/tcp.ts",
-			"qualifiedName": "unstable_local_addr"
-		},
-		"53": {
-			"sourceFileName": "src/net/tcp.ts",
-			"qualifiedName": "tcp"
-		},
-		"54": {
-			"sourceFileName": "src/net/tcp.ts",
-			"qualifiedName": "toString"
-		},
-		"55": {
-			"sourceFileName": "src/net/tcp.ts",
-			"qualifiedName": "toString"
-		},
-		"56": {
-			"sourceFileName": "src/net/tcp.ts",
-			"qualifiedName": "tcp"
-		},
-		"57": {
-			"sourceFileName": "src/net/tcp.ts",
-			"qualifiedName": "unstable_new"
-		},
-		"58": {
-			"sourceFileName": "src/net/tcp.ts",
-			"qualifiedName": "unstable_new"
-		},
-		"59": {
-			"sourceFileName": "src/net/tcp.ts",
-			"qualifiedName": "bind"
-		},
-		"60": {
-			"sourceFileName": "src/net/tcp.ts",
-			"qualifiedName": "bind"
-		},
-		"61": {
-			"sourceFileName": "src/net/tcp.ts",
-			"qualifiedName": "addr"
-		},
-		"62": {
-			"sourceFileName": "src/net/tcp.ts",
-			"qualifiedName": "TcpListener"
-		},
-		"63": {
-			"sourceFileName": "src/net/tcp.ts",
-			"qualifiedName": "__type"
-		},
-		"64": {
-			"sourceFileName": "src/net/tcp.ts",
-			"qualifiedName": "__type._tag"
-		},
-		"65": {
-			"sourceFileName": "src/net/tcp.ts",
-			"qualifiedName": "__type.addr"
-		},
-		"66": {
-			"sourceFileName": "src/net/serve.ts",
-			"qualifiedName": ""
-		},
-		"67": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "PullZoneHandlerOptions"
 		},
-		"68": {
+		"4": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type"
 		},
-		"69": {
+		"5": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type.url"
 		},
-		"70": {
+		"6": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "OriginRequestContext"
 		},
-		"71": {
+		"7": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type"
 		},
-		"72": {
+		"8": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type.request"
 		},
-		"73": {
+		"9": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "OriginResponseContext"
 		},
-		"74": {
+		"10": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type"
 		},
-		"75": {
+		"11": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type.request"
 		},
-		"76": {
+		"12": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type.response"
 		},
-		"77": {
+		"13": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "PullZoneHandler"
 		},
-		"78": {
+		"14": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type"
 		},
-		"79": {
+		"15": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type.onOriginRequest"
 		},
-		"80": {
+		"16": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type"
 		},
-		"81": {
+		"17": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type"
 		},
-		"82": {
+		"18": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "middleware"
 		},
-		"83": {
+		"19": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type"
 		},
-		"84": {
+		"20": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type"
 		},
-		"85": {
+		"21": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "ctx"
 		},
-		"86": {
+		"22": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type.onOriginResponse"
 		},
-		"87": {
+		"23": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type"
 		},
-		"88": {
+		"24": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type"
 		},
-		"89": {
+		"25": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "middleware"
 		},
-		"90": {
+		"26": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type"
 		},
-		"91": {
+		"27": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type"
 		},
-		"92": {
+		"28": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "ctx"
 		},
-		"93": {
+		"29": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "serve"
 		},
-		"94": {
+		"30": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "serve"
 		},
-		"95": {
+		"31": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "handler"
 		},
-		"96": {
+		"32": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "serve"
 		},
-		"97": {
+		"33": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "listener"
 		},
-		"98": {
+		"34": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type"
 		},
-		"99": {
+		"35": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type.port"
 		},
-		"100": {
+		"36": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type.hostname"
 		},
-		"101": {
+		"37": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "handler"
 		},
-		"102": {
+		"38": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "serve"
 		},
-		"103": {
+		"39": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "listener"
 		},
-		"104": {
+		"40": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "handler"
 		},
-		"105": {
+		"41": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "ServeHandler"
 		},
-		"106": {
+		"42": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type"
 		},
-		"107": {
+		"43": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "servePullZone"
 		},
-		"108": {
+		"44": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "servePullZone"
 		},
-		"109": {
+		"45": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "options"
 		},
-		"110": {
+		"46": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "servePullZone"
 		},
-		"111": {
+		"47": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "listener"
 		},
-		"112": {
+		"48": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type"
 		},
-		"113": {
+		"49": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type.port"
 		},
-		"114": {
+		"50": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type.hostname"
 		},
-		"115": {
+		"51": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "options"
 		},
-		"116": {
+		"52": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "servePullZone"
 		},
-		"117": {
+		"53": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "listener"
 		},
-		"118": {
+		"54": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "options"
 		},
-		"119": {
+		"55": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "ServerHandler"
 		},
-		"120": {
+		"56": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type"
 		},
-		"121": {
+		"57": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "__type"
 		},
-		"122": {
+		"58": {
 			"sourceFileName": "src/net/serve.ts",
 			"qualifiedName": "request"
 		},
-		"123": {
+		"59": {
 			"sourceFileName": "src/net/ip.ts",
 			"qualifiedName": ""
 		},
-		"124": {
+		"60": {
 			"sourceFileName": "src/net/ip.ts",
 			"qualifiedName": "toString"
 		},
-		"125": {
+		"61": {
 			"sourceFileName": "src/net/ip.ts",
 			"qualifiedName": "toString"
 		},
-		"126": {
+		"62": {
 			"sourceFileName": "src/net/ip.ts",
 			"qualifiedName": "ip"
 		},
-		"127": {
+		"63": {
 			"sourceFileName": "src/net/ip.ts",
 			"qualifiedName": "tryParseFromString"
 		},
-		"128": {
+		"64": {
 			"sourceFileName": "src/net/ip.ts",
 			"qualifiedName": "tryParseFromString"
 		},
-		"129": {
+		"65": {
 			"sourceFileName": "src/net/ip.ts",
 			"qualifiedName": "ip"
 		},
-		"130": {
+		"66": {
 			"sourceFileName": "src/net/ip.ts",
 			"qualifiedName": "Enumerate"
 		},
-		"131": {
+		"67": {
 			"sourceFileName": "src/net/ip.ts",
 			"qualifiedName": "N"
 		},
-		"132": {
+		"68": {
 			"sourceFileName": "src/net/ip.ts",
 			"qualifiedName": "Acc"
 		},
-		"133": {
+		"69": {
 			"sourceFileName": "src/net/ip.ts",
 			"qualifiedName": "Range"
 		},
-		"134": {
+		"70": {
 			"sourceFileName": "src/net/ip.ts",
 			"qualifiedName": "F"
 		},
-		"135": {
+		"71": {
 			"sourceFileName": "src/net/ip.ts",
 			"qualifiedName": "T"
 		},
-		"136": {
+		"72": {
 			"sourceFileName": "src/net/ip.ts",
 			"qualifiedName": "IPv4"
+		},
+		"73": {
+			"sourceFileName": "src/net/socket_addr.ts",
+			"qualifiedName": ""
+		},
+		"74": {
+			"sourceFileName": "src/net/socket_addr.ts",
+			"qualifiedName": "isV4"
+		},
+		"75": {
+			"sourceFileName": "src/net/socket_addr.ts",
+			"qualifiedName": "isV4"
+		},
+		"76": {
+			"sourceFileName": "src/net/socket_addr.ts",
+			"qualifiedName": "value"
+		},
+		"77": {
+			"sourceFileName": "src/net/socket/v4.ts",
+			"qualifiedName": ""
+		},
+		"78": {
+			"sourceFileName": "src/net/socket/v4.ts",
+			"qualifiedName": "port"
+		},
+		"79": {
+			"sourceFileName": "src/net/socket/v4.ts",
+			"qualifiedName": "port"
+		},
+		"80": {
+			"sourceFileName": "src/net/socket/v4.ts",
+			"qualifiedName": "addr"
+		},
+		"81": {
+			"sourceFileName": "src/net/socket/v4.ts",
+			"qualifiedName": "ip"
+		},
+		"82": {
+			"sourceFileName": "src/net/socket/v4.ts",
+			"qualifiedName": "ip"
+		},
+		"83": {
+			"sourceFileName": "src/net/socket/v4.ts",
+			"qualifiedName": "addr"
+		},
+		"84": {
+			"sourceFileName": "src/net/socket/v4.ts",
+			"qualifiedName": "tryFromString"
+		},
+		"85": {
+			"sourceFileName": "src/net/socket/v4.ts",
+			"qualifiedName": "tryFromString"
+		},
+		"86": {
+			"sourceFileName": "src/net/socket/v4.ts",
+			"qualifiedName": "value"
+		},
+		"87": {
+			"sourceFileName": "src/net/socket/v4.ts",
+			"qualifiedName": "SocketAddrV4"
+		},
+		"88": {
+			"sourceFileName": "src/net/socket/v4.ts",
+			"qualifiedName": "__type"
+		},
+		"89": {
+			"sourceFileName": "src/net/socket/v4.ts",
+			"qualifiedName": "__type._tag"
+		},
+		"90": {
+			"sourceFileName": "src/net/socket/v4.ts",
+			"qualifiedName": "__type.port"
+		},
+		"91": {
+			"sourceFileName": "src/net/socket/v4.ts",
+			"qualifiedName": "__type.ip"
+		},
+		"92": {
+			"sourceFileName": "src/net/socket_addr.ts",
+			"qualifiedName": "NoAddr"
+		},
+		"93": {
+			"sourceFileName": "src/net/socket_addr.ts",
+			"qualifiedName": "__type"
+		},
+		"94": {
+			"sourceFileName": "src/net/socket_addr.ts",
+			"qualifiedName": "__type._tag"
+		},
+		"95": {
+			"sourceFileName": "src/net/socket_addr.ts",
+			"qualifiedName": "SocketAddr"
+		},
+		"96": {
+			"sourceFileName": "src/net/socket_addr.ts",
+			"qualifiedName": "SocketAddrError"
+		},
+		"97": {
+			"sourceFileName": "src/net/socket_addr.ts",
+			"qualifiedName": "InvalidAddr"
+		},
+		"98": {
+			"sourceFileName": "../../node_modules/.pnpm/@types+node@20.14.15/node_modules/@types/node/globals.d.ts",
+			"qualifiedName": "__global.ErrorConstructor.captureStackTrace"
+		},
+		"99": {
+			"sourceFileName": "../../node_modules/.pnpm/@types+node@20.14.15/node_modules/@types/node/globals.d.ts",
+			"qualifiedName": "__global.ErrorConstructor.captureStackTrace"
+		},
+		"100": {
+			"sourceFileName": "../../node_modules/.pnpm/@types+node@20.14.15/node_modules/@types/node/globals.d.ts",
+			"qualifiedName": "targetObject"
+		},
+		"101": {
+			"sourceFileName": "../../node_modules/.pnpm/@types+node@20.14.15/node_modules/@types/node/globals.d.ts",
+			"qualifiedName": "constructorOpt"
+		},
+		"102": {
+			"sourceFileName": "../../node_modules/.pnpm/@types+node@20.14.15/node_modules/@types/node/globals.d.ts",
+			"qualifiedName": "__global.ErrorConstructor.prepareStackTrace"
+		},
+		"103": {
+			"sourceFileName": "../../node_modules/.pnpm/@types+node@20.14.15/node_modules/@types/node/globals.d.ts",
+			"qualifiedName": "__type"
+		},
+		"104": {
+			"sourceFileName": "../../node_modules/.pnpm/@types+node@20.14.15/node_modules/@types/node/globals.d.ts",
+			"qualifiedName": "__type"
+		},
+		"105": {
+			"sourceFileName": "../../node_modules/.pnpm/@types+node@20.14.15/node_modules/@types/node/globals.d.ts",
+			"qualifiedName": "err"
+		},
+		"106": {
+			"sourceFileName": "../../node_modules/.pnpm/@types+node@20.14.15/node_modules/@types/node/globals.d.ts",
+			"qualifiedName": "stackTraces"
+		},
+		"107": {
+			"sourceFileName": "../../node_modules/.pnpm/@types+node@20.14.15/node_modules/@types/node/globals.d.ts",
+			"qualifiedName": "__global.ErrorConstructor.stackTraceLimit"
+		},
+		"108": {
+			"sourceFileName": "src/net/socket_addr.ts",
+			"qualifiedName": "InvalidAddr.__constructor"
+		},
+		"109": {
+			"sourceFileName": "src/net/socket_addr.ts",
+			"qualifiedName": "InvalidAddr"
+		},
+		"110": {
+			"sourceFileName": "src/net/socket_addr.ts",
+			"qualifiedName": "message"
+		},
+		"111": {
+			"sourceFileName": "src/net/socket_addr.ts",
+			"qualifiedName": "InvalidAddr._guard"
+		},
+		"112": {
+			"sourceFileName": "src/net/socket_addr.ts",
+			"qualifiedName": "InvalidAddr.toString"
+		},
+		"113": {
+			"sourceFileName": "src/net/socket_addr.ts",
+			"qualifiedName": "InvalidAddr.toString"
+		},
+		"114": {
+			"sourceFileName": "../../node_modules/.pnpm/typescript@5.5.4/node_modules/typescript/lib/lib.es5.d.ts",
+			"qualifiedName": "Error.name"
+		},
+		"115": {
+			"sourceFileName": "../../node_modules/.pnpm/typescript@5.5.4/node_modules/typescript/lib/lib.es5.d.ts",
+			"qualifiedName": "Error.message"
+		},
+		"116": {
+			"sourceFileName": "../../node_modules/.pnpm/typescript@5.5.4/node_modules/typescript/lib/lib.es5.d.ts",
+			"qualifiedName": "Error.stack"
+		},
+		"117": {
+			"sourceFileName": "../../node_modules/.pnpm/typescript@5.5.4/node_modules/typescript/lib/lib.es2022.error.d.ts",
+			"qualifiedName": "Error.cause"
+		},
+		"118": {
+			"sourceFileName": "src/net/tcp.ts",
+			"qualifiedName": ""
+		},
+		"119": {
+			"sourceFileName": "src/net/tcp.ts",
+			"qualifiedName": "isTcpListener"
+		},
+		"120": {
+			"sourceFileName": "src/net/tcp.ts",
+			"qualifiedName": "isTcpListener"
+		},
+		"121": {
+			"sourceFileName": "src/net/tcp.ts",
+			"qualifiedName": "value"
+		},
+		"122": {
+			"sourceFileName": "src/net/tcp.ts",
+			"qualifiedName": "unstable_local_addr"
+		},
+		"123": {
+			"sourceFileName": "src/net/tcp.ts",
+			"qualifiedName": "unstable_local_addr"
+		},
+		"124": {
+			"sourceFileName": "src/net/tcp.ts",
+			"qualifiedName": "tcp"
+		},
+		"125": {
+			"sourceFileName": "src/net/tcp.ts",
+			"qualifiedName": "toString"
+		},
+		"126": {
+			"sourceFileName": "src/net/tcp.ts",
+			"qualifiedName": "toString"
+		},
+		"127": {
+			"sourceFileName": "src/net/tcp.ts",
+			"qualifiedName": "tcp"
+		},
+		"128": {
+			"sourceFileName": "src/net/tcp.ts",
+			"qualifiedName": "unstable_new"
+		},
+		"129": {
+			"sourceFileName": "src/net/tcp.ts",
+			"qualifiedName": "unstable_new"
+		},
+		"130": {
+			"sourceFileName": "src/net/tcp.ts",
+			"qualifiedName": "bind"
+		},
+		"131": {
+			"sourceFileName": "src/net/tcp.ts",
+			"qualifiedName": "bind"
+		},
+		"132": {
+			"sourceFileName": "src/net/tcp.ts",
+			"qualifiedName": "addr"
+		},
+		"133": {
+			"sourceFileName": "src/net/tcp.ts",
+			"qualifiedName": "TcpListener"
+		},
+		"134": {
+			"sourceFileName": "src/net/tcp.ts",
+			"qualifiedName": "__type"
+		},
+		"135": {
+			"sourceFileName": "src/net/tcp.ts",
+			"qualifiedName": "__type._tag"
+		},
+		"136": {
+			"sourceFileName": "src/net/tcp.ts",
+			"qualifiedName": "__type.addr"
 		}
 	},
 	"files": {
 		"entries": {
 			"1": "src/lib.ts",
 			"2": "src/net/index.ts",
-			"3": "src/net/socket_addr.ts",
-			"4": "src/net/socket/v4.ts",
-			"5": "src/net/tcp.ts",
-			"6": "src/net/serve.ts",
-			"7": "src/net/ip.ts"
+			"3": "src/net/serve.ts",
+			"4": "src/net/ip.ts",
+			"5": "src/net/socket_addr.ts",
+			"6": "src/net/socket/v4.ts",
+			"7": "src/net/tcp.ts"
 		},
 		"reflections": {
 			"1": 0,
 			"2": 1,
 			"3": 2,
-			"4": 6,
-			"5": 47,
-			"6": 66,
-			"7": 123
+			"4": 59,
+			"5": 73,
+			"6": 77,
+			"7": 118
 		}
 	}
 }

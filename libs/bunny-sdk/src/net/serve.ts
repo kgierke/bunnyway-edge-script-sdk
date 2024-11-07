@@ -1,3 +1,8 @@
+/**
+ * Networking Primitives for the HTTP(s) protocol.
+ *
+ * @packageDocumentation
+ */
 import { internal_getPlatform } from "../platform.ts";
 import * as NodeImpl from "./_impl/node/serve.ts";
 import { TcpListener } from "./tcp.ts";
@@ -21,10 +26,6 @@ type ServerHandler = (request: Request) => Response | Promise<Response>;
 
 type ServeHandler = {} & unknown;
 
-/**
- * Serves HTTP requests on the given [TcpListener]
- */
-
 function is_port_and_hostname(
   value: unknown,
 ): value is { port: number; hostname: string } {
@@ -39,6 +40,17 @@ function is_port_and_hostname(
 
 /**
  * Serves HTTP requests with the provided handler.
+ *
+ * @example
+ * ```ts
+ * import * as BunnySDK from "https://esm.sh/@bunny.net/edgescript-sdk@0.11";
+ *
+ * console.log("Starting server...");
+ * BunnySDK.net.http.serve(async (req) => {
+ *   console.log(`[INFO]: ${req.method} - ${req.url}`);
+ *   return new Response("Hello bunny!");
+ * });
+ * ```
  */
 function serve(handler: ServerHandler): ServeHandler;
 function serve(
@@ -142,6 +154,40 @@ export type PullZoneHandler = {
  *
  * If you have an associated PullZone within Bunny, we'll use it on production
  * and for local development you can configure it with the `url` option.
+ *
+ * @example
+ * ```ts
+ * import BunnySDK from "https://esm.sh/@bunny.net/edgescript-sdk@0.11.2";
+ *
+ * console.log("Starting server...");
+ *
+ * BunnySDK.net.http.servePullZone({ url: "https://echo.free.beeceptor.com/" })
+ *   .onOriginRequest(
+ *     (ctx) => {
+ *       const optFT = ctx.request.headers.get("feature-flags");
+ *       const featureFlags = optFT
+ *         ? optFT.split(",").map((v) => v.trimStart())
+ *         : [];
+ *
+ *       // Route-based matching and feature flag check
+ *       const path = new URL(ctx.request.url).pathname;
+ *       if (path === "/d") {
+ *         if (!featureFlags.includes("route-d-preview")) {
+ *           return Promise.resolve(
+ *             new Response("You cannot use this route.", { status: 400 }),
+ *           );
+ *         }
+ *       }
+ *
+ *       return Promise.resolve(ctx.request);
+ *     },
+ *   ).onOriginResponse((ctx) => {
+ *     const response = ctx.response;
+ *     response.headers.append("Via", "Custom");
+ *
+ *     return Promise.resolve(response);
+ *   });
+ * ```
  */
 function servePullZone(options: PullZoneHandlerOptions): PullZoneHandler;
 function servePullZone(
