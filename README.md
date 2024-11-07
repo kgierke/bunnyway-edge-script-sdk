@@ -4,23 +4,22 @@
   </a>
 </div>
 
-# bunny.net - edgescript-sdk
+# bunny.net - EdgeScript SDK
 
-This repository contains SDK to enable local development of bunny.net Edge Scripting: `@bunny.net/edgescript-sdk`
+This repository contains the SDK for local development of bunny.net Edge Scripting `@bunny.net/edgescript-sdk`
 
-Bunny.net Edge Scripting is built with a custom Deno runtime that runs on the bunny.net Edge Scripting. 
-This SDK provides similar environment to bunny.net Edge Scripting locally, 
-so that you can run and debug scripts in your local environment before publishing them.
+Bunny.net Edge Scripting uses a custom Deno runtime, designed to run scripts across the bunny.net edge network. 
+This SDK replicates a similar environment locally, allowing you to develop and debug your scripts before deploying them.
 
-> Even if the Bunny Runtime is very similar to the Deno & Node Runtime, some API
-> might differ or not being available due to the fact we leverage our CDN
-> and run scripts in a serverless environment.
+> Note: While the Bunny Runtime shares many similarities with Deno and Node runtimes,
+> certain APIs may differ or be unavailable due to the unique characteristics of
+> running scripts in a serverless CDN environment.
 >
 
 ## Usage
 
-With `@bunny.net/edgescript-sdk` you can write a script which will work with
-Deno, with Node, and within our network.
+With @bunny.net/edgescript-sdk, you can create scripts that run seamlessly on Deno,
+Node, and within the bunny.net network.
 
 ```typescript
 import * as BunnySDK from "@bunny.net/edgescript-sdk";
@@ -38,7 +37,7 @@ BunnySDK.net.http.serve({ port: 8080, hostname: '127.0.0.1' }, async (req) => {
 });
 ```
 
-If you execute this code on a deployed bunny.net Edge Scripting script, the serve function will
-be used to execute requests on a connected PullZone.
+When executed on a deployed bunny.net Edge Scripting script, the serve function processes incoming 
+requests through a connected PullZone.
 
-Full list of examples is in the [example folder](./example/).
+For more examples, refer to the [examples folder](./example/).
